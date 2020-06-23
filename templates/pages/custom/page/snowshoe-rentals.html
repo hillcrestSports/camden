@@ -1,0 +1,320 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+        <div class="page-content">
+
+
+
+
+
+
+            <!-- BEGIN CUSTOM CONTENT -->
+
+
+
+            <div class="main-container col1-layout">
+                <div class="main-top-container"></div>
+                <div class="main container">
+                    <div class="inner-container">
+                        <div class="preface"></div>
+                        <div id="page-columns" class="columns">
+                            <div class="column-main">
+                                <div class="std">
+                                    <style>
+                                        /* Layout Architecture */
+
+                                        .content-wrapper {
+                                            display: block;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                        }
+
+                                        .rental-top-section {
+                                            background-image: url("{{cdn 'assets/img/hillcrest/rentals/showshoe-rental.jpg'}}");
+                                            min-height: 400px;
+                                            background-size: cover;
+                                            background-position: center bottom;
+                                            max-width: 1895px;
+                                            margin: 0 auto;
+                                            position: relative;
+                                        }
+
+                                        .rental-info-area {
+                                            display: flex;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                            margin-top: 50px;
+                                            max-width: 1500px;
+
+                                        }
+
+                                        .column-1,
+                                        .column-2 {
+                                            display: inline-block;
+                                            width: 49%;
+                                            box-sizing: border-box;
+                                            height: 100%;
+                                            padding: 20px;
+                                        }
+
+                                        .seasonal {
+                                            background: #4c86a8;
+                                            margin-top: 38px;
+                                            /* min-height: 135px; */
+                                            padding: 34px;
+                                            text-align: center;
+                                            border-radius: 27px;
+                                            color: white;
+                                        }
+
+                                        .column-1 p {
+                                            display: block;
+                                            width: 95%;
+                                            margin: 0 auto;
+                                        }
+
+                                        /* Form */
+
+                                        td {
+                                            width: 100% !important;
+                                            padding: 10px !important;
+                                            display: table-cell;
+                                            vertical-align: middle !important;
+                                        }
+
+                                        table.rental-prices-table td:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        table.rental-prices-table th:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        td {
+                                            width: 367px;
+                                            padding: 8px;
+                                        }
+
+                                        th {
+                                            border-bottom: 2px solid #b5aaaa;
+                                            font-size: 18px !important;
+                                            background: white;
+                                        }
+
+
+
+                                        table.rental-prices-table {
+                                            position: relative;
+                                            width: 75%;
+                                            display: block;
+                                            margin: 0 auto;
+                                        }
+
+                                        table.rental-prices-table tr:nth-child(odd) {
+                                            background: #4c86a814;
+                                        }
+
+                                        /* Typography */
+
+                                        .column-2 p {
+                                            margin-bottom: 34px !important;
+                                            text-align: center;
+                                        }
+
+                                        h2 {
+                                            font-size: 23px !important;
+                                            text-align: center;
+                                        }
+
+                                        /* Button Stuff */
+
+                                        a.hc-button {
+                                            display: block;
+                                            background: #a4e542;
+                                            padding: 11px;
+                                            margin: 5px;
+                                            width: 200px;
+                                            text-align: center;
+                                            border-radius: 99px;
+                                            font-size: 19px;
+                                            margin-left: 30px;
+                                        }
+
+                                        a.hc-button i {
+                                            display: inline-block;
+                                            margin-right: 15px;
+                                            transform: scale(1.5);
+                                            color: #d4ff93;
+                                        }
+
+                                        .button-wrapper {
+                                            position: absolute;
+                                            bottom: 0;
+                                            margin-bottom: 24px;
+                                        }
+
+                                        a.hc-button:hover {
+                                            background: #d4ff93;
+                                            color: #89bf38;
+                                        }
+
+                                        a.hc-button:hover>i {
+                                            color: #91ca3b;
+                                        }
+
+
+                                        /* Responsive */
+
+                                        @media screen and (max-width: 1200px) {
+
+                                            .column-1,
+                                            .column-2 {
+                                                width: 100%;
+                                            }
+
+                                            .rental-info-area {
+                                                display: block;
+                                                width: 100%;
+                                            }
+
+                                            .rental-top-section {
+
+                                                min-height: 200px;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+                                                max-width: 1895px;
+                                                margin: 0 auto;
+                                            }
+
+                                        }
+
+                                        h3.geo {
+                                            font-weight: 800;
+                                            font-size: 12px;
+                                            margin-top: -18px;
+                                            margin-bottom: 16px !important;
+                                            color: #4c86a8;
+                                        }
+                                    </style>
+
+
+
+                                    <div class="content-wrapper">
+                                        <div class="rental-top-section">
+                                            <div class="button-wrapper">
+                                                <a class="hc-button" href="tel:503-665-4455"><i
+                                                        class="fas fa-phone-square"></i>503-665-4455</a>
+                                                <a class="hc-button"
+                                                    href="https://www.google.com/maps/place/Hillcrest+Ski+%26+Sports/@45.4947826,-122.4095778,17z/data=!3m1!4b1!4m5!3m4!1s0x549598512e037e0b:0xa60d3e36ad1fdb71!8m2!3d45.4947826!4d-122.4073891"><i
+                                                        class="fas fa-map-marker-alt"></i>Directions</a>
+                                            </div>
+                                        </div>
+                                        <div class="rental-info-area">
+
+                                            <div class="column-1">
+                                                <h1>Snowshoe Rentals</h1>
+                                                <h3 class="geo">In Gresham OR | Near Sandy OR on the way to Mt Hood</h3>
+                                                <p>Walk along the snowy terrain this winter and take in the beautiful
+                                                    views with Hillscrest Ski &amp; Sports’ snowshoe rentals. At
+                                                    Hillcrest, we enjoy sharing our love of the outdoors and we make it
+                                                    easier for you to so as well. With our snowshoe rental package, you
+                                                    get the snowshoes, boots, and poles. You also have the option to
+                                                    rent them out separately. And as with all of our rentals, you get
+                                                    your items for 24 hours. However, we do provide longer rentals when
+                                                    needed. Hillcrest Ski &amp; Sports in Gresham OR is your
+                                                    one-stop-shop for all of your snowshoe rental needs. We’re
+                                                    conveniently located at the corner of Powell and Burnside at the
+                                                    beginning of Hwy 26.
+                                                </p>
+                                            </div>
+
+                                            <div class="column-2">
+
+                                                <h2>Snowshoe Equipment Rentals - Daily</h2>
+                                                <p>*Snowshoe Packages Include
+                                                    Snowshoes - Boots - Poles</p>
+                                                <table class="rental-prices-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Snowshoe Equipment Prices</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Snowshoe Package</td>
+                                                            <td>$29</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Boot Only</td>
+                                                            <td>$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Snowshoe Only</td>
+                                                            <td>$21</td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="postscript"></div>
+                    </div>
+                </div>
+                <div class="main-bottom-container"></div>
+            </div>
+
+
+
+            <!-- END CUSTOM CONTENT -->
+
+
+
+
+
+
+        </div>
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

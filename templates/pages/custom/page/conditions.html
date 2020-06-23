@@ -1,0 +1,295 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+        <div class="page-content">
+
+            <div class="container"><br />
+                <div class="inner-container">
+                    <h1>Local Resort and Driving Conditions</h1>
+                </div>
+                <br />
+                <div class="container"><img
+                        src="{{cdn 'assets/img/hillcrest/conditions//trail-map.jpg'}}"
+                        alt="Trail Map" /></div>
+                <br /> <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.timberlinelodge.com" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//timberline-logo.jpg'}}"
+                                alt="Timberline Lodge" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.timberlinelodge.com"
+                                    rel="noopener noreferrer" target="_blank">Timberline</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> With the land and historic lodge owned by the U.S.
+                                    Forest Service, Timberline Lodge and Ski Area has been family-operated since May
+                                    1955. Just like many of our staff, we grew up skiing on Mt. Hood and generations of
+                                    our families continue to come back to this special place: an experience we&rsquo;re
+                                    committed to sharing with our guests.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Timberline+Lodge+and+Ski+Area/@45.3311307,-121.7131958,17z/data=!3m1!4b1!4m5!3m4!1s0x54be1eaaa37312a3:0x6738b4912b8ca4f2!8m2!3d45.3311307!4d-121.7110071">
+                                    - 27500 E Timberline Road, Government Camp, OR 97028</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="https://www.timberlinelodge.com/conditions" rel="noopener noreferrer"
+                            target="_blank"><strong>Timberline Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.skihood.com" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//meadows-logo.jpg'}}"
+                                alt="Mt Hood Meadows" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.skihood.com" rel="noopener noreferrer"
+                                    target="_blank">Mt Hood Meadows</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Mt. Hood Meadows Ski Resort operates on a special use
+                                    permit on the Mt. Hood National Forest, offering some of the most spectacular skiing
+                                    and snowboarding in the Northwest. The resort is just 90 minutes away from Portland,
+                                    and it delivers a big mountain experience you'd expect to travel much farther to
+                                    enjoy. The resort sprawls across Mt. Hood's southeast flank, the sunny,
+                                    wind-protected side of Mt. Hood. Meadows' playful terrain welcomes and challenges
+                                    all levels of skiers and snowboarders.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Mt+Hood+Meadows/@45.3318292,-121.667286,17z/data=!3m1!4b1!4m5!3m4!1s0x549509fc7b558e2d:0xf901251e42ec04f5!8m2!3d45.3318292!4d-121.6650973">
+                                    - 14040 Oregon 35, Mt Hood, OR 97041</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="https://www.skihood.com/the-mountain/conditions" rel="noopener noreferrer"
+                            target="_blank"><strong>Mt Hood Meadows Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="http://www.skibowl.com/winter/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//skibowl-logo.jpg'}}"
+                                alt="Mt Hood Skibowl" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="http://www.skibowl.com/winter/"
+                                    rel="noopener noreferrer" target="_blank">Skibowl</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Skibowl boasts the largest night skiing area in the
+                                    country. With affordable ticket prices and the steepest terrain (accessible by lift)
+                                    on Mt Hood, its 960 snow covered acres are perfect for the whole family. Located in
+                                    Government Camp, OR on Mt Hood.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Mt.+Hood+Skibowl/@45.2943342,-121.789626,14z/data=!3m1!4b1!4m5!3m4!1s0x54950a02e42e16a5:0xc931fca320228d69!8m2!3d45.294812!4d-121.7723448">
+                                    - 87000 U.S. 26, Government Camp, OR 97028</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="http://www.skibowl.com/winter/mt-hood-weather-conditions" rel="noopener noreferrer"
+                            target="_blank"><strong>Skibowl Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.mtbachelor.com" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//bachelor-logo.jpg'}}"
+                                alt="Mt Bachelor Ski Resort" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.mtbachelor.com" rel="noopener noreferrer"
+                                    target="_blank">Bachelor</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Founded in 1957, Mt Bachelor Ski Resort baosts some of
+                                    the best skiing/snowboarding int the Northwest. Any easy 30 minute drive from Bend,
+                                    OR makes it a popular vacation destination. With 2 lodges, 11 lifts and access to
+                                    the backside of the mountain via a lift to the peak, Mt Bachelor has something for
+                                    everyone.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Mt+Bachelor/@43.9796633,-121.701172,13.21z/data=!4m8!1m2!2m1!1smt+bachelor!3m4!1s0x54b8b9ae8ce30bd7:0x9a1e1f0cf4a846e5!8m2!3d44.0032955!4d-121.6787875">
+                                    - 13000 SW Century Drive, Bend, OR 97702</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="https://www.mtbachelor.com/conditions-report/" rel="noopener noreferrer"
+                            target="_blank"><strong>Mt Bachelor Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.skihoodoo.com/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//hoodoo-logo.jpg'}}"
+                                alt="Hoodoo Ski Resort" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.skihoodoo.com/" rel="noopener noreferrer"
+                                    target="_blank">Hoodoo</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Built in 1938, Hoodoo Ski Resort is located in the
+                                    central Cascade Range of Oregon. Located near the summit of Santiam Pass on U.S.
+                                    Route 20, the ski area operates on federal land through agreement with Willamette
+                                    National Forest on Hoodoo Butte, a volcanic cinder cone.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Hoodoo+Ski+Area/@44.408755,-121.8735697,17z/data=!3m1!4b1!4m5!3m4!1s0x54bf374c3f8e7d9d:0x28cc775b14baa46b!8m2!3d44.408755!4d-121.871381">
+                                    - 27400 Big Lake Road, Sisters, OR 97759</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="http://www.santiampassskipatrol.org/wx/weather.htm" rel="noopener noreferrer"
+                            target="_blank"><strong>Hoodoo Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="http://www.summitskiarea.com/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//summit-logo.jpg'}}"
+                                alt="Summit Ski Area" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="http://www.summitskiarea.com/"
+                                    rel="noopener noreferrer" target="_blank">Summit</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Our resort caters to families and novices. Many people
+                                    learned to ski at Summit as children, and are now bringing their children and
+                                    grandchildren here to learn. Come see us today and experience the joy of skiing,
+                                    snowboarding, or tubing!</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Summit+Ski+Area/@45.3029059,-121.748017,17z/data=!3m1!4b1!4m5!3m4!1s0x54be18da1ef0cb0b:0xd33b5913f4d2d6c3!8m2!3d45.3029059!4d-121.7458283">
+                                    - 90255 Government Camp Loop, Government Camp, OR 97028</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="http://www.summitskiarea.com/conditions" rel="noopener noreferrer"
+                            target="_blank"><strong>Summit Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="http://cooperspur.com/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//cooper-spur-logo.jpg'}}"
+                                alt="Cooper Spur Resort" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="http://cooperspur.com/" rel="noopener noreferrer"
+                                    target="_blank">Cooper Spur</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Cooper Spur is a ski area located on northeast Mount
+                                    Hood. The resort has one double chair ski lift serving ten runs, and a vertical drop
+                                    of 350 ft. There are 6.5 kilometers of cross-country skiing trails. The resort
+                                    encompasses 0.2 km&sup2; (50 acres) of terrain, and receives an average of 100
+                                    inches of snow per year. It has condos, log cabins, a restaurant, and a hotel
+                                    located in its base area.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Cooper+Spur+Mountain+Resort/@45.425548,-121.5931707,17z/data=!3m1!4b1!4m5!3m4!1s0x54be0243a5ebfe1f:0xd5b7941756b8a8a5!8m2!3d45.425548!4d-121.590982">
+                                    - 10755 Cooper Spur Rd, Mt Hood, OR 97041</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;" href="http://cooperspur.com/conditions/"
+                            rel="noopener noreferrer" target="_blank"><strong>Cooper Spur Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="http://www.mtbaker.us/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//baker-logo.jpg'}}"
+                                alt="Mt Baker Ski Area" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="http://www.mtbaker.us/" rel="noopener noreferrer"
+                                    target="_blank">Mt Baker</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Mt. Baker Ski Area, Inc. is located in the Mt.
+                                    Baker-Snoqualmie National Forest and is operated under a permit granted by United
+                                    States Forest Service. The ski area is home to the world's greatest recorded
+                                    snowfall in one season, 1,140 inches (95.0ft) recorded during the 1998&ndash;99
+                                    season. It sees unusually high average snowfall every year.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Mt.+Baker+Ski+Area/@48.8560827,-121.6828053,14z/data=!3m1!4b1!4m5!3m4!1s0x5484f615f7b9cc1f:0x144ebb99b36b27a2!8m2!3d48.8572916!4d-121.6666619">
+                                    - Mt Baker Hwy, Deming, WA 98244</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;" href="http://www.mtbaker.us/snow-report"
+                            rel="noopener noreferrer" target="_blank"><strong>Mt Baker Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.crystalmountainresort.com/" rel="noopener noreferrer"
+                            target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//crystal-logo.jpg'}}"
+                                alt="Crystal Mountain Resort" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.crystalmountainresort.com/"
+                                    rel="noopener noreferrer" target="_blank">Crystal Mountain Resort</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p><strong>Summary</strong><br /> Mt. Baker Ski Area, Inc. is located in the Mt.
+                                    Baker-Snoqualmie National Forest and is operated under a permit granted by United
+                                    States Forest Service. The ski area is home to the world's greatest recorded
+                                    snowfall in one season, 1,140 inches (95.0ft) recorded during the 1998&ndash;99
+                                    season. It sees unusually high average snowfall every year.</p>
+                            </dd>
+                            <dd style="font-size: 14px;"><strong>Click here for directions</strong><a
+                                    href="https://www.google.com/maps/place/Crystal+Mountain+Resort/@46.9353367,-121.4770354,17z/data=!3m1!4b1!4m5!3m4!1s0x5490b9cdfca91a49:0x1367b65ca6218669!8m2!3d46.9353331!4d-121.4748467">
+                                    - 33914 Crystal Mountain Blvd, Enumclaw, WA 98022</a></dd>
+                        </dl><br /><a style="font-size: 20px; color: #f19a3e;"
+                            href="https://www.crystalmountainresort.com/the-mountain/mountain-report/"
+                            rel="noopener noreferrer" target="_blank"><strong>Crystal Mountain Conditions</strong></a>
+                    </div>
+                </div>
+                <br /> <br />
+                <div class="grid-container-spaced">
+                    <div class="col-md-2"><a href="https://www.tripcheck.com/Pages/Road-Conditions"
+                            rel="noopener noreferrer" target="_blank"><img class="fade-on-hover"
+                                src="{{cdn 'assets/img/hillcrest/conditions//trip-check-logo.jpg'}}"
+                                alt="Road Conditions" /></a></div>
+                    <div class="col-md-10">
+                        <dl>
+                            <dt style="font-size: 26px;"><a href="https://www.tripcheck.com/Pages/Road-Conditions"
+                                    rel="noopener noreferrer" target="_blank">Road Conditions</a></dt>
+                            <dd style="font-size: 18px;">
+                                <p>ODOT has up to date informaiton on current road conditions throughout the Northwest.
+                                    Here you can find real-time traffic and conditions updates so you know before you
+                                    go.</p>
+                            </dd>
+                            <dt><a style="font-size: 20px; color: #f19a3e;"
+                                    href="https://www.tripcheck.com/Pages/Road-Conditions" rel="noopener noreferrer"
+                                    target="_blank"><strong>ODOT Road Conditions</strong></a></dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

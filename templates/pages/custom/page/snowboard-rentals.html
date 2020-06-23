@@ -1,0 +1,355 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+        <div class="page-content">
+
+
+
+
+
+
+            <!-- BEGIN CUSTOM CONTENT -->
+
+
+
+            <div class="main-container col1-layout">
+                <div class="main-top-container"></div>
+                <div class="main container">
+                    <div class="inner-container">
+                        <div class="preface"></div>
+                        <div id="page-columns" class="columns">
+                            <div class="column-main">
+                                <div class="std">
+                                    <style>
+                                        h3.geo {
+                                            font-weight: 800;
+                                            font-size: 12px;
+                                            margin-top: -18px;
+                                            margin-bottom: 16px !important;
+                                            color: #4c86a8;
+                                        }
+
+
+                                        /* Layout Architecture */
+
+                                        .content-wrapper {
+                                            display: block;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                        }
+
+                                        .rental-top-section {
+                                            background-image: url("{{cdn 'assets/img/hillcrest/rentals/snowboard-rental.jpg'}}");
+                                            min-height: 400px;
+                                            background-size: cover;
+                                            background-position: center bottom;
+                                            max-width: 1895px;
+                                            margin: 0 auto;
+                                            position: relative;
+                                        }
+
+                                        .rental-info-area {
+                                            display: flex;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                            margin-top: 50px;
+                                            max-width: 1500px;
+
+                                        }
+
+                                        .column-1,
+                                        .column-2 {
+                                            display: inline-block;
+                                            width: 49%;
+                                            box-sizing: border-box;
+                                            height: 100%;
+                                            padding: 20px;
+                                        }
+
+                                        .seasonal {
+                                            background: #4c86a8;
+                                            margin-top: 38px;
+                                            /* min-height: 135px; */
+                                            padding: 34px;
+                                            text-align: center;
+                                            border-radius: 27px;
+                                            color: white;
+                                        }
+
+                                        .column-1 p {
+                                            display: block;
+
+                                            margin: 0 auto;
+                                        }
+
+                                        /* Form */
+
+                                        td {
+                                            width: 100% !important;
+                                            padding: 10px !important;
+                                            display: table-cell;
+                                            vertical-align: middle !important;
+                                        }
+
+                                        table.rental-prices-table td:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        table.rental-prices-table th:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        td {
+                                            width: 367px;
+                                            padding: 8px;
+                                        }
+
+                                        th {
+                                            border-bottom: 2px solid #b5aaaa;
+                                            font-size: 18px !important;
+                                            background: white;
+                                        }
+
+
+
+                                        table.rental-prices-table {
+                                            position: relative;
+                                            width: 75%;
+                                            display: block;
+                                            margin: 0 auto;
+                                        }
+
+                                        table.rental-prices-table tr:nth-child(odd) {
+                                            background: #4c86a814;
+                                        }
+
+                                        /* Typography */
+
+                                        .column-2 p {
+                                            margin-bottom: 34px !important;
+                                            text-align: center;
+                                        }
+
+                                        h2 {
+                                            font-size: 23px !important;
+                                            text-align: center;
+                                        }
+
+                                        /* Button Stuff */
+
+                                        a.hc-button {
+                                            display: block;
+                                            background: #a4e542;
+                                            padding: 11px;
+                                            margin: 5px;
+                                            width: 200px;
+                                            text-align: center;
+                                            border-radius: 99px;
+                                            font-size: 19px;
+                                            margin-left: 30px;
+                                        }
+
+                                        a.hc-button i {
+                                            display: inline-block;
+                                            margin-right: 15px;
+                                            transform: scale(1.5);
+                                            color: #d4ff93;
+                                        }
+
+                                        .button-wrapper {
+                                            position: absolute;
+                                            bottom: 0;
+                                            margin-bottom: 24px;
+                                        }
+
+                                        a.hc-button:hover {
+                                            background: #d4ff93;
+                                            color: #89bf38;
+                                        }
+
+                                        a.hc-button:hover>i {
+                                            color: #91ca3b;
+                                        }
+
+
+                                        /* Responsive */
+
+                                        @media screen and (max-width: 1200px) {
+
+                                            .column-1,
+                                            .column-2 {
+                                                width: 100%;
+                                            }
+
+                                            .rental-info-area {
+                                                display: block;
+                                                width: 100%;
+                                            }
+
+                                            .rental-top-section {
+
+                                                min-height: 200px;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+                                                max-width: 1895px;
+                                                margin: 0 auto;
+                                            }
+
+                                        }
+                                    </style>
+
+
+
+                                    <div class="content-wrapper">
+                                        <div class="rental-top-section">
+                                            <div class="button-wrapper">
+                                                <a class="hc-button" href="tel:503-665-4455"><i
+                                                        class="fas fa-phone-square"></i>503-665-4455</a>
+                                                <a class="hc-button"
+                                                    href="https://www.google.com/maps/place/Hillcrest+Ski+%26+Sports/@45.4947826,-122.4095778,17z/data=!3m1!4b1!4m5!3m4!1s0x549598512e037e0b:0xa60d3e36ad1fdb71!8m2!3d45.4947826!4d-122.4073891"><i
+                                                        class="fas fa-map-marker-alt"></i>Directions</a>
+                                            </div>
+                                        </div>
+                                        <div class="rental-info-area">
+
+                                            <div class="column-1">
+                                                <h1>Snowboard Rentals</h1>
+                                                <h3 class="geo">In Gresham OR | Near Sandy OR on the way to Mt Hood</h3>
+                                                <p>
+                                                    Hillcrest Ski &amp; Sports has everything you need for your next
+                                                    snowboarding adventure in the Portland area! Our snowboard packages
+                                                    include men’s snowboards, women’s snowboards, and kid’s snowboards
+                                                    complete with boots and bindings. Have your own snowboard and just
+                                                    need boots? We also rent out single equipment including men’s
+                                                    snowboard boots, women’s snowboard boots, and kid’s snowboard boots.
+                                                    If you’re new to the sport, we’ll help make sure you’re properly
+                                                    fitted to your boots and snowboard. We also offer demonstration
+                                                    snowboard packages. We rent out our equipment on a
+                                                    first-come-first-serve basis and once you receive your snowboard
+                                                    equipment, you’ll have it for a full 24 hours, however, longer
+                                                    rentals are available. Hillcrest Ski &amp; Sports is Portland’s
+                                                    one-stop-shop for all your winter sports needs. We also provide
+                                                    recreational passes! We are conveniently located at the corner of
+                                                    Powell and Burnside at the beginning of Hwy 26. So contact us today
+                                                    at 503-665-4455 for your snowboard rentals!
+                                                    <br><br>
+                                                </p>
+                                                <h3>Snowboard Package Rentals</h3>
+                                                Different boards are designed for different skill levels. And we at
+                                                Hillcrest cater to them all. We provide snowboards for beginners,
+                                                intermediate, advanced, and junior boarders. Keep in mind if you’re only
+                                                doing a snowboard rental, you’ll want to bring your boots in at the time
+                                                of pick-up so they can be properly fitted. If you’re getting the
+                                                snowboard rental package, the fitting is already included.
+                                                <br><br>
+                                                <h3>Snow Gear for Rent</h3>
+                                                Be out on the slopes for as long as you want with our snowboard boot
+                                                rental. We provide high-quality waterproof boots in several different
+                                                brands and models to cater to everyone’s shape, size, and skill level.
+                                                We want you to be comfortable during your snowboarding adventure, which
+                                                is why we not only fit the boots to you, but to your snowboard as well.
+                                                <p></p>
+                                            </div>
+
+                                            <div class="column-2">
+                                                <h2>Snowboard Equipment Rentals - Daily</h2>
+                                                <p>*Snowboard Packages Include Board - Boots - Bindings</p>
+                                                <table class="rental-prices-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>SnowBoard Equipment Prices</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Adult: Snowboard Package</td>
+                                                            <td>$42</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Board Only (must bring in boots to be fitted)
+                                                            </td>
+                                                            <td>$30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Boot Only</td>
+                                                            <td>$22</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Adult: Demo Snowboard Package</td>
+                                                            <td>$50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Demo Snowboard Only</td>
+                                                            <td>$50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Youth: Snowboard Package</td>
+                                                            <td>$30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Youth: Board Only (must bring in boots to be fitted)
+                                                            </td>
+                                                            <td>$18</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Youth: Boot Only</td>
+                                                            <td>$15</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="postscript"></div>
+                    </div>
+                </div>
+                <div class="main-bottom-container"></div>
+            </div>
+
+
+
+            <!-- END CUSTOM CONTENT -->
+
+
+
+
+
+
+        </div>
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

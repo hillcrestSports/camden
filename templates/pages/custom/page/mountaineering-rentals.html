@@ -1,0 +1,364 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+        <div class="page-content">
+
+
+
+
+
+
+            <!-- BEGIN CUSTOM CONTENT -->
+
+
+
+            <div class="main-container col1-layout">
+                <div class="main-top-container"></div>
+                <div class="main container">
+                    <div class="inner-container">
+                        <div class="preface"></div>
+                        <div id="page-columns" class="columns">
+                            <div class="column-main">
+                                <div class="std">
+                                    <style>
+                                        /* Layout Architecture */
+
+                                        .content-wrapper {
+                                            display: block;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                        }
+
+                                        .rental-top-section {
+                                            background-image: url("{{cdn 'assets/img/hillcrest/rentals/mountaineering-retals.jpg'}}");
+                                            min-height: 400px;
+                                            background-size: cover;
+                                            background-position: center bottom;
+                                            max-width: 1895px;
+                                            margin: 0 auto;
+                                            position: relative;
+                                        }
+
+                                        .rental-info-area {
+                                            display: flex;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                            margin-top: 50px;
+                                            max-width: 1500px;
+
+                                        }
+
+                                        .column-1,
+                                        .column-2 {
+                                            display: inline-block;
+                                            width: 49%;
+                                            box-sizing: border-box;
+                                            height: 100%;
+                                            padding: 20px;
+                                        }
+
+                                        .seasonal {
+                                            background: #4c86a8;
+                                            margin-top: 38px;
+                                            /* min-height: 135px; */
+                                            padding: 34px;
+                                            text-align: center;
+                                            border-radius: 27px;
+                                            color: white;
+                                        }
+
+                                        .column-1 p {
+                                            display: block;
+
+                                            margin: 0 auto;
+                                        }
+
+                                        /* Form */
+
+                                        td {
+                                            width: 100% !important;
+                                            padding: 10px !important;
+                                            display: table-cell;
+                                            vertical-align: middle !important;
+                                        }
+
+                                        table.rental-prices-table td:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        table.rental-prices-table th:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        td {
+                                            width: 367px;
+                                            padding: 8px;
+                                        }
+
+                                        th {
+                                            border-bottom: 2px solid #b5aaaa;
+                                            font-size: 18px !important;
+                                            background: white;
+                                        }
+
+
+
+                                        table.rental-prices-table {
+                                            position: relative;
+                                            width: 75%;
+                                            display: block;
+                                            margin: 0 auto;
+                                        }
+
+                                        table.rental-prices-table tr:nth-child(odd) {
+                                            background: #4c86a814;
+                                        }
+
+                                        /* Typography */
+
+                                        ul.hc-list li {
+                                            margin: 14px;
+                                        }
+
+                                        .column-2 p {
+                                            margin-bottom: 34px !important;
+                                            text-align: center;
+                                        }
+
+                                        h2 {
+                                            font-size: 23px !important;
+                                            text-align: center;
+                                        }
+
+                                        /* Button Stuff */
+
+                                        a.hc-button {
+                                            display: block;
+                                            background: #a4e542;
+                                            padding: 11px;
+                                            margin: 5px;
+                                            width: 200px;
+                                            text-align: center;
+                                            border-radius: 99px;
+                                            font-size: 19px;
+                                            margin-left: 30px;
+                                        }
+
+                                        a.hc-button i {
+                                            display: inline-block;
+                                            margin-right: 15px;
+                                            transform: scale(1.5);
+                                            color: #d4ff93;
+                                        }
+
+                                        .button-wrapper {
+                                            position: absolute;
+                                            bottom: 0;
+                                            margin-bottom: 24px;
+                                        }
+
+                                        a.hc-button:hover {
+                                            background: #d4ff93;
+                                            color: #89bf38;
+                                        }
+
+                                        a.hc-button:hover>i {
+                                            color: #91ca3b;
+                                        }
+
+
+                                        /* Responsive */
+
+                                        @media screen and (max-width: 1200px) {
+
+                                            .column-1,
+                                            .column-2 {
+                                                width: 100%;
+                                            }
+
+                                            .rental-info-area {
+                                                display: block;
+                                                width: 100%;
+                                            }
+
+                                            .rental-top-section {
+
+                                                min-height: 200px;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+                                                max-width: 1895px;
+                                                margin: 0 auto;
+                                            }
+
+                                        }
+
+                                        h3.geo {
+                                            font-weight: 800;
+                                            font-size: 12px;
+                                            margin-top: -18px;
+                                            margin-bottom: 16px !important;
+                                            color: #4c86a8;
+                                        }
+                                    </style>
+
+
+
+                                    <div class="content-wrapper">
+                                        <div class="rental-top-section">
+                                            <div class="button-wrapper">
+                                                <a class="hc-button" href="tel:503-665-4455"><i
+                                                        class="fas fa-phone-square"></i>503-665-4455</a>
+                                                <a class="hc-button"
+                                                    href="https://www.google.com/maps/place/Hillcrest+Ski+%26+Sports/@45.4947826,-122.4095778,17z/data=!3m1!4b1!4m5!3m4!1s0x549598512e037e0b:0xa60d3e36ad1fdb71!8m2!3d45.4947826!4d-122.4073891"><i
+                                                        class="fas fa-map-marker-alt"></i>Directions</a>
+                                            </div>
+                                        </div>
+                                        <div class="rental-info-area">
+
+                                            <div class="column-1">
+                                                <h1>Mountaineering Rentals</h1>
+                                                <h3 class="geo">In Gresham OR | Near Sandy OR on the way to Mt Hood</h3>
+                                                <p>No matter how much experience you have, you will want to bring
+                                                    mountaineering gear to your trip. Boots: Not only do you want boots
+                                                    that fit comfortably, but you also want a pair with good traction
+                                                    that will keep you from slipping on the ice. You’ll need the boot to
+                                                    be tougher, more supportive and have a stiffer sole to accommodate
+                                                    crampons. We have a brand new fleet of both men’s and women’s La
+                                                    Sportiva Trango Tower Boots. The Trango Tower is the perfect
+                                                    3-season alpine boot for tackling any of our local Cascade giants
+                                                    such as Mt Hood or Mt Adams. </p>
+                                                <br><br>
+                                                <h3>Mountaineering Package Rentals</h3>
+                                                <ul class="hc-list">
+                                                    <li>
+                                                        <strong>Crampons:</strong> These work with your boots and have
+                                                        sharp metal spikes on the bottom that help you sink your feet
+                                                        into the ice. Crampons are built in a variety of materials
+                                                        dependent upon the activity. Hillcrest rents semi-rigid, steel
+                                                        crampons in both universal straps and semi automatic straps that
+                                                        will fit a wide range of sole types. Hillcrest has a brand new
+                                                        fleet of the CAMP Stalker Univeral and CAMP Stalker Semi-Auto.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Ice ax:</strong> Use an ice ax to break through the ice
+                                                        and keep your balance as well as to self arrest during a sudden
+                                                        fall. Ice axes are sized based on intended activity and height
+                                                        of user. Hillcrest currently stocks the CAMP Neve in a wide
+                                                        variety of sizes.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Helmet:</strong> Protect yourself against loose, falling
+                                                        rocks and ice with a helmet. All Mountaineering helmets are
+                                                        certified for overhead protection unlike most ski and snowboard
+                                                        helmets which are certified for side-protection. We offer the
+                                                        CAMP Titan helmets.
+                                                        Though you can buy mountaineering equipment, you can save some
+                                                        money when you rent gear instead. Hillcrest has all the
+                                                        mountaineering equipment you need that you can rent for 48
+                                                        hours. To reserve the equipment, stop by our store!
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+
+                                            <div class="column-2">
+                                                <h2>Mountaineering Equipment Rentals - Daily</h2>
+                                                <p>*Mountaineering Packages Include<br> Boots - Crampons - Ice Axe -
+                                                    Helmet</p>
+                                                <table class="rental-prices-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Mountaineering Equipment Rentals</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Package (Boots, Crampons, Ice Axe &amp; Helmet)</td>
+                                                            <td>$35</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Boot Only</td>
+                                                            <td>$18</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ice Axe Only</td>
+                                                            <td>$8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Crampons Only</td>
+                                                            <td>$10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Helmet Only</td>
+                                                            <td>$8</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <br>
+                                                <center>
+                                                    <p>All rentals are first come first serve - please call for more
+                                                        info!
+                                                        Mountaineering Rentals are for a full 48 hours - longer rentals
+                                                        are available as well</p>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="postscript"></div>
+                    </div>
+                </div>
+                <div class="main-bottom-container"></div>
+            </div>
+
+
+
+            <!-- END CUSTOM CONTENT -->
+
+
+
+
+
+
+        </div>
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

@@ -1,0 +1,427 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+        <div class="page-content">
+
+
+
+
+
+
+            <!-- BEGIN CUSTOM CONTENT -->
+
+
+
+            <div class="main-container col1-layout">
+                <div class="main-top-container"></div>
+                <div class="main container">
+                    <div class="inner-container">
+                        <div class="preface"></div>
+                        <div id="page-columns" class="columns">
+                            <div class="column-main">
+                                <div class="std">
+                                    <style>
+                                        h3.geo {
+                                            font-weight: 800;
+                                            font-size: 12px;
+                                            margin-top: -18px;
+                                            margin-bottom: 16px !important;
+                                            color: #4c86a8;
+                                        }
+
+                                        /* Layout Architecture */
+
+                                        .content-wrapper {
+                                            display: block;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                        }
+
+                                        .rental-top-section {
+                                            background-image: url("{{cdn 'assets/img/hillcrest/rentals/ski-rentals.jpg'}}");
+                                            min-height: 400px;
+                                            background-size: cover;
+                                            background-position: center bottom;
+                                            max-width: 1895px;
+                                            margin: 0 auto;
+                                            position: relative;
+                                        }
+
+                                        .rental-info-area {
+                                            display: flex;
+                                            width: 100%;
+                                            margin: 0 auto;
+                                            margin-top: 50px;
+                                            max-width: 1500px;
+
+                                        }
+
+                                        .column-1,
+                                        .column-2 {
+                                            display: inline-block;
+                                            width: 49%;
+                                            box-sizing: border-box;
+                                            height: 100%;
+                                            padding: 20px;
+                                        }
+
+                                        .seasonal {
+                                            background: #4c86a8;
+                                            margin-top: 38px;
+                                            /* min-height: 135px; */
+                                            padding: 34px;
+                                            text-align: center;
+                                            border-radius: 27px;
+                                            color: white;
+                                        }
+
+                                        .column-1 p {
+                                            display: block;
+
+                                            margin: 0 auto;
+                                        }
+
+                                        /* Form */
+
+                                        td {
+                                            width: 100% !important;
+                                            padding: 10px !important;
+                                            display: table-cell;
+                                            vertical-align: middle !important;
+                                        }
+
+                                        table.rental-prices-table td:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        table.rental-prices-table th:nth-child(even) {
+                                            text-align: center;
+                                        }
+
+                                        td {
+                                            width: 367px;
+                                            padding: 8px;
+                                        }
+
+                                        th {
+                                            border-bottom: 2px solid #b5aaaa;
+                                            font-size: 18px !important;
+                                            background: white;
+                                        }
+
+
+
+                                        table.rental-prices-table {
+                                            position: relative;
+                                            width: 75%;
+                                            display: block;
+                                            margin: 0 auto;
+                                        }
+
+                                        table.rental-prices-table tr:nth-child(odd) {
+                                            background: #4c86a814;
+                                        }
+
+                                        /* Typography */
+
+                                        .column-2 p {
+                                            margin-bottom: 34px !important;
+                                            text-align: center;
+                                        }
+
+                                        h2 {
+                                            font-size: 23px !important;
+                                            text-align: center;
+                                        }
+
+                                        /* Button Stuff */
+
+                                        a.hc-button {
+                                            display: block;
+                                            background: #a4e542;
+                                            padding: 11px;
+                                            margin: 5px;
+                                            width: 200px;
+                                            text-align: center;
+                                            border-radius: 99px;
+                                            font-size: 19px;
+                                            margin-left: 30px;
+                                        }
+
+                                        a.hc-button i {
+                                            display: inline-block;
+                                            margin-right: 15px;
+                                            transform: scale(1.5);
+                                            color: #d4ff93;
+                                        }
+
+                                        .button-wrapper {
+                                            position: absolute;
+                                            bottom: 0;
+                                            margin-bottom: 24px;
+                                        }
+
+                                        a.hc-button:hover {
+                                            background: #d4ff93;
+                                            color: #89bf38;
+                                        }
+
+                                        a.hc-button:hover>i {
+                                            color: #91ca3b;
+                                        }
+
+                                        /* Content Buttons */
+
+                                        .content-btn-wrap {
+                                            display: block;
+                                            margin-top: 42px;
+                                        }
+
+                                        a.content-link:hover {
+                                            background: #7bbbe0;
+                                        }
+
+
+                                        a.content-link {
+                                            display: block;
+                                            background: #4c86a8;
+                                            width: 50%;
+                                            text-align: center;
+                                            margin: 0 auto;
+                                            color: white;
+                                            padding: 9px 0px 9px 0px;
+                                            border-radius: 43px;
+                                        }
+
+                                        .content-btn-wrap {
+                                            display: block;
+                                            margin-top: 42px;
+                                        }
+
+                                        a.content-link:hover {
+                                            background: #7bbbe0;
+                                        }
+
+
+                                        a.content-link {
+                                            display: block;
+                                            background: #4c86a8;
+                                            width: 50%;
+                                            text-align: center;
+                                            margin: 0 auto;
+                                            color: white;
+                                            padding: 9px 0px 9px 0px;
+                                            border-radius: 43px;
+                                        }
+
+
+
+                                        /* Responsive */
+
+                                        @media screen and (max-width: 1200px) {
+
+                                            .column-1,
+                                            .column-2 {
+                                                width: 100%;
+                                            }
+
+                                            .rental-info-area {
+                                                display: block;
+                                                width: 100%;
+                                            }
+
+                                            .rental-top-section {
+                                                min-height: 200px;
+                                                background-size: cover;
+                                                background-position: center center;
+                                                width: 100%;
+                                                max-width: 1895px;
+                                                margin: 0 auto;
+                                            }
+
+                                        }
+                                    </style>
+
+                                    <div class="content-wrapper">
+                                        <div class="rental-top-section">
+                                            <div class="button-wrapper">
+                                                <a class="hc-button" href="tel:503-665-4455"><i
+                                                        class="fas fa-phone-square"></i>503-665-4455</a>
+                                                <a class="hc-button"
+                                                    href="https://www.google.com/maps/place/Hillcrest+Ski+%26+Sports/@45.4947826,-122.4095778,17z/data=!3m1!4b1!4m5!3m4!1s0x549598512e037e0b:0xa60d3e36ad1fdb71!8m2!3d45.4947826!4d-122.4073891"><i
+                                                        class="fas fa-map-marker-alt"></i>Directions</a>
+                                            </div>
+                                        </div>
+                                        <div class="rental-info-area">
+
+                                            <div class="column-1">
+                                                <h1>Ski Rentals</h1>
+                                                <h3 class="geo">In Gresham OR | Near Sandy OR on the way to Mt Hood</h3>
+                                                <p>
+                                                    Enjoy the slopes with Hillcrest Ski &amp; Sports’ ski rentals! We
+                                                    offer a variety of ski equipment rentals including men’s skis and
+                                                    boots, women’s skis and boots, and kid’s skis and boots. Every ski
+                                                    package also comes with bindings and poles. New to skiing? We have
+                                                    experienced trainers to properly fit you for your equipment--
+                                                    depending on your skill level, and they’ll also provide a
+                                                    demonstration for you. All rentals are on a first-come, first-serve
+                                                    basis. Once you rent your ski equipment, you’ll have it for 24
+                                                    hours, however, longer rentals are available. Hillcrest Ski &amp;
+                                                    Sports is your one-stop-shop for all your skiing needs as we also
+                                                    sell recreational passes. So contact us today at 503-665-4455 for
+                                                    your ski rentals. We are located at the corner of Powell and
+                                                    Burnside at the beginning of Hwy 26.
+                                                    <br><br>
+                                                </p>
+                                                <h3>Ski Package Rental</h3>
+                                                To have an enjoyable skiing experience, it’s important to have a pair of
+                                                skis that are the perfect length for you. To do this, we at Hillcrest
+                                                Sports will measure your height and weight, learn your skill level as
+                                                well as learn what terrain you’ll be on. The type of skis we’ll give you
+                                                will be based on the type of skiing you plan to do.
+                                                <ul>
+                                                    <li>All-Mountain skis are great for a mix of terrain including
+                                                        groomed and powder. They are suited for all skill levels and age
+                                                        groups. </li>
+                                                    <li>All-Mountain wide skies work well in groomed areas and powder
+                                                        areas. They are slightly wider in the waist than the
+                                                        all-mountain ski.</li>
+                                                    <li>Powder skis are best if you plan on skiing in deep powder snow.
+                                                    </li>
+                                                    <br><br>
+                                                    <h3>Rental Ski Boots</h3>
+                                                </ul>
+                                                Your ski boots are perhaps the most important part of your rental
+                                                package. If they’re too stiff, too small or too large, you will not have
+                                                a great experience. This is why we at Hillcrest Sports always have you
+                                                try on the boot first and if it’s not comfortable, we’ll try other sizes
+                                                and models until we find you a perfect match. Everyone has different
+                                                feet sizes and shapes as well as skill levels when it comes to skiing
+                                                and all should be taken into consideration when selecting a boot.
+                                                <br><br>
+                                                <h3>Rental Ski Poles</h3>
+                                                Your ski poles help you balance and time your turns. Whether you’ve
+                                                forgotten, misplaced, or broke your own ski poles, we at Hillcrest
+                                                provide rental ski poles for the low price of $7. We have adult and
+                                                children’s ski poles for rent.
+                                                <p></p>
+
+                                            </div>
+
+                                            <div class="column-2">
+                                                <h2>Skiing Equipment Rentals - Daily</h2>
+                                                <p>*Ski Packages Include Skis - Boots - Bindings - Poles</p>
+                                                <table class="rental-prices-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Ski Equipment Prices</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Adult: Ski Package</td>
+                                                            <td>$42</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Ski Only (must bring in boots for inspection
+                                                                &amp; fitting)</td>
+                                                            <td>$30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Boot Only (Includes mandatory binding test on
+                                                                skis)</td>
+                                                            <td>$37</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Adult: Demo Ski Package</td>
+                                                            <td>$65</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adult: Demo Ski Only</td>
+                                                            <td>$52</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>*Youth: Ski Package</td>
+                                                            <td>$30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Youth: Ski Only (must bring in boots for inspection
+                                                                &amp; fitting)</td>
+                                                            <td>$18</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Youth: Boot Only (Includes mandatory binding test on
+                                                                skis)</td>
+                                                            <td>$25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Poles</td>
+                                                            <td>$7</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="content-btn-wrap"><a class="content-link"
+                                                        href="https://www.hillcrestsports.com/ski-rentals/cross-country">Cross
+                                                        Country Ski Rental</a></div>
+                                                <div class="seasonal">
+                                                    <h3>Season Rental Prices</h3>
+                                                    Take advantage of our season rental program
+                                                    Rent your gear now and keep it until the season ends so you and your
+                                                    family
+                                                    can have fun all winter long.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="postscript"></div>
+                    </div>
+                </div>
+                <div class="main-bottom-container"></div>
+            </div>
+
+
+
+            <!-- END CUSTOM CONTENT -->
+
+
+
+
+
+
+        </div>
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

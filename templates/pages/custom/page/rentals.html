@@ -1,0 +1,747 @@
+{{#partial "page"}}
+
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="page">
+        {{#unless theme_settings.hide_page_heading }}
+        <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
+        {{/unless}}
+
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+
+
+            <div class="page-content">
+                <div class="main-container col1-layout">
+                    <div class="main-top-container"></div>
+                    <div class="main container">
+                        <div class="inner-container">
+                            <div class="preface"></div>
+                            <div id="page-columns" class="columns">
+                                <div class="column-main">
+                                    <div class="std">
+                                        <style>
+                                            a.content-link {
+                                                background: #4c86a8;
+                                                color: white;
+                                                padding: 13px;
+                                                display: block;
+                                                width: 75%;
+                                                text-align: center;
+                                                border-radius: 50px;
+                                                margin: 0 auto;
+                                                margin-top: 26px;
+                                            }
+
+                                            h3.geo {
+                                                font-weight: 800;
+                                                font-size: 12px;
+                                                margin-top: -18px;
+                                                margin-bottom: 16px !important;
+                                                color: #4c86a8;
+                                            }
+
+
+                                            /* Layout Architecture */
+
+                                            .feature.feature-icon-hover.indent.indent-size-xl {
+                                                text-align: center;
+                                            }
+
+                                            .feature.indent-size-xl {
+                                                padding-left: 0px;
+                                            }
+
+                                            .feature.indent {
+                                                padding-left: 0px;
+                                            }
+
+
+
+                                            .content-wrapper {
+                                                display: block;
+                                                width: 100%;
+                                                margin: 0 auto;
+                                            }
+
+                                            .rental-top-section {
+                                                background-image: url("{{cdn 'assets/img/hillcrest/rentals/all-rentals.jpg'}}");
+                                                min-height: 400px;
+                                                background-size: cover;
+                                                background-position: center bottom;
+                                                max-width: 1895px;
+                                                margin: 0 auto;
+                                                position: relative;
+
+
+                                            }
+
+                                            .rental-info-area {
+                                                /* display: flex; */
+                                                width: 100%;
+                                                margin: 0 auto;
+                                                margin-top: 68px;
+                                                max-width: 1500px;
+
+                                            }
+
+                                            .specials-section {
+                                                padding-top: 30px;
+                                                border: 6px solid #4c86a88a;
+                                                box-sizing: border-box;
+                                                border-radius: 23px;
+                                                margin-bottom: 36px;
+                                            }
+
+                                            .column-wrapper {
+                                                display: flex;
+                                                justify-content: center;
+                                            }
+
+                                            .column-1,
+                                            .column-2 {
+                                                display: inline-block;
+                                                width: 49%;
+                                                box-sizing: border-box;
+                                                height: 100%;
+                                                padding: 20px;
+                                            }
+
+                                            .seasonal {
+                                                background: #4c86a8;
+                                                margin-top: 38px;
+                                                /* min-height: 135px; */
+                                                padding: 34px;
+                                                text-align: center;
+                                                border-radius: 27px;
+                                                color: white;
+                                            }
+
+                                            .column-1 p {
+                                                display: block;
+                                                width: 95%;
+                                                margin: 0 auto;
+                                            }
+
+                                            /* Form */
+
+                                            td {
+                                                width: 100% !important;
+                                                padding: 10px !important;
+                                                display: table-cell;
+                                                vertical-align: middle !important;
+                                            }
+
+                                            table.rental-prices-table td:nth-child(even) {
+                                                text-align: center;
+                                            }
+
+                                            table.rental-prices-table th:nth-child(even) {
+                                                text-align: center;
+                                            }
+
+                                            td {
+                                                width: 367px;
+                                                padding: 8px;
+                                            }
+
+                                            th {
+                                                border-bottom: 2px solid #b5aaaa;
+                                                font-size: 18px !important;
+                                                background: white;
+                                            }
+
+
+
+                                            table.rental-prices-table {
+                                                position: relative;
+                                                width: 75%;
+                                                display: block;
+                                                margin: 0 auto;
+                                            }
+
+                                            table.rental-prices-table tr:nth-child(odd) {
+                                                background: #4c86a814;
+                                            }
+
+                                            /* Typography */
+
+                                            h1 {
+                                                position: absolute;
+                                                bottom: 0;
+                                                display: block;
+                                                margin: 0 auto;
+                                                text-align: center;
+                                                width: 100%;
+                                                font-size: 18vw;
+                                                color: #a4e542;
+                                                mix-blend-mode: hard-light;
+                                                text-transform: uppercase;
+                                                font-weight: 800;
+                                            }
+
+                                            .column-2 p {
+                                                margin-bottom: 34px !important;
+                                                text-align: center;
+                                            }
+
+                                            h2 {
+                                                font-size: 23px !important;
+                                                text-align: center;
+                                            }
+
+                                            .specials-section h2 {
+                                                font-weight: 700;
+                                                text-transform: uppercase;
+                                                color: #4c86a8;
+                                            }
+
+
+
+                                            /* Button Stuff */
+
+                                            a.hc-button {
+                                                display: block;
+                                                background: #a4e542;
+                                                padding: 11px;
+                                                margin: 5px;
+                                                width: 200px;
+                                                text-align: center;
+                                                border-radius: 99px;
+                                                font-size: 19px;
+                                                margin-left: 30px;
+                                            }
+
+                                            a.hc-button i {
+                                                display: inline-block;
+                                                margin-right: 15px;
+                                                transform: scale(1.5);
+                                                color: #d4ff93;
+                                            }
+
+                                            .button-wrapper {
+                                                position: absolute;
+                                                bottom: 0;
+                                                margin-bottom: 24px;
+                                            }
+
+                                            a.hc-button:hover {
+                                                background: #d4ff93;
+                                                color: #89bf38;
+                                            }
+
+                                            a.hc-button:hover>i {
+                                                color: #91ca3b;
+                                            }
+
+
+                                            /* Tile Section */
+
+                                            .cc-tile {
+                                                min-height: 300px;
+                                                border-radius: 20px;
+                                                width: 30%;
+                                                margin: 1vw;
+                                                position: relative;
+                                            }
+
+
+                                            .tile-section {
+                                                margin-top: 22px;
+                                                margin-bottom: 32px;
+                                                ;
+                                                padding: 20px;
+                                            }
+
+                                            div#snowboard {
+                                                background-image: url("{{cdn 'assets/img/hillcrest/rentals/snowboard-rental.jpg'}}");
+                                                background-size: cover;
+                                                background-position: -100% 1px;
+                                            }
+
+                                            div#snowshoe {
+                                                background: url("{{cdn 'assets/img/hillcrest/rentals/showshoe-rental.jpg'}}");
+                                                background-size: cover;
+                                                background-position: right;
+                                            }
+
+                                            div#kayak {
+                                                background: url("{{cdn 'assets/img/hillcrest/rentals/kayak-rental.jpg'}}");
+                                                background-size: cover;
+                                                background-position: right;
+                                            }
+
+                                            div#paddleboard {
+                                                background: url("{{cdn 'assets/img/hillcrest/rentals/paddle-board-rental.jpg'}}");
+                                                background-size: cover;
+                                                background-position: right;
+                                            }
+
+                                            div#ski {
+                                                background-size: cover;
+                                                background-position: right;
+                                                background-image: url("{{cdn 'assets/img/hillcrest/rentals/ski-rentals.jpg'}}");
+                                            }
+
+                                            div#mountaineering {
+                                                background-size: cover;
+                                                background-position: right;
+                                                background-image: url("{{cdn 'assets/img/hillcrest/rentals/mountaineering-retals.jpg'}}");
+                                            }
+
+                                            /* Essentials Section */
+
+
+                                            .essentials-section .cc-tile {
+                                                min-height: 0px !important;
+                                            }
+
+                                            .essentials-section .cc-tile {
+                                                padding: 0px !important;
+                                            }
+
+
+                                            .essentials-section .tile-overlay {
+                                                position: absolute;
+                                                height: 100%;
+                                                width: 100%;
+                                                background: #4c86a800;
+                                                border-radius: 21px;
+                                                bottom: 0px;
+                                                z-index: 99999999999999999999999999 !important;
+                                                mix-blend-mode: color;
+                                            }
+
+                                            .essentials-section .cc-tile:hover>.tile-overlay {
+                                                background: #4c86a8;
+                                                transition: all .3s
+                                            }
+
+                                            .essentials-section .cc-tile h3 {
+                                                color: #000;
+                                                position: relative;
+                                            }
+
+                                            /*end*/
+
+
+                                            .cc-tile h3 {
+                                                text-transform: uppercase;
+                                                color: #ffffff;
+                                                font-weight: 700;
+                                                text-align: center;
+                                                position: absolute;
+                                                width: 100%;
+                                                bottom: 0px;
+                                                z-index: 999;
+                                            }
+
+
+
+                                            .tile-overlay {
+                                                position: absolute;
+                                                height: 100%;
+                                                width: 100%;
+                                                background: #00000000;
+                                                border-radius: 21px;
+                                            }
+
+                                            .tile-section .column-1,
+                                            .tile-section .column-2 {
+                                                padding: 0px !important;
+                                            }
+
+
+
+                                            .cc-tile:hover>.tile-overlay {
+                                                background: #4c86a8;
+                                                mix-blend-mode: color;
+                                                transition: all .3s;
+                                            }
+
+                                            .essentials-section a,
+                                            .tile-section a {
+                                                display: contents;
+                                            }
+
+                                            .essentials {
+                                                margin-top: 76px;
+                                            }
+
+                                            .essentials-section {
+                                                margin-top: 36px;
+                                            }
+
+
+                                            /* Responsive */
+
+
+                                            @media screen and (min-width: 1201px) {
+                                                h1 {
+                                                    font-size: 250px !important;
+                                                }
+                                            }
+
+                                            @media screen and (max-width: 1200px) {
+
+                                                .column-wrapper.essentials-section {
+                                                    text-align: center;
+                                                }
+
+                                                .essentials-section .column-1 {
+                                                    width: 43%;
+                                                }
+
+                                                .column-1,
+                                                .column-2 {
+                                                    width: 100%;
+                                                }
+
+                                                .rental-info-area {
+                                                    display: block;
+                                                    width: 100%;
+                                                }
+
+                                                .rental-top-section {
+
+                                                    min-height: 200px;
+                                                    background-size: cover;
+                                                    background-position: center center;
+                                                    width: 100%;
+                                                    max-width: 1895px;
+                                                    margin: 0 auto;
+                                                }
+
+                                                .column-wrapper {
+                                                    display: block;
+                                                }
+
+                                            }
+                                        </style>
+
+
+
+                                        <div class="content-wrapper">
+                                            <div class="rental-top-section">
+                                                <h1>Rentals</h1>
+
+                                            </div>
+
+                                            <div class="rental-info-area">
+
+                                                <div class="specials-section">
+                                                    <h2>Season Rental Pricing</h2>
+                                                    <div class="column-wrapper">
+                                                        <div class="column-1">
+                                                            <center>
+                                                                <h3>All rentals are first come first serve</h3>
+                                                                <p>Take advantage of our season rental program
+                                                                    Rent your gear now and keep it until the season ends so
+                                                                    you and your family
+                                                                    can have fun all winter long. Please call for more info!
+                                                                    Prices will increase - Rent early to save big</p>
+                                                            </center>
+                                                            <div class="content-btn-wrap"><a class="content-link"
+                                                                    href="https://www.hillcrestsports.com/ski-rentals/">Ski
+                                                                    Rentals</a></div>
+                                                        </div>
+                                                        <div class="column-2">
+                                                            <table class="rental-prices-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Package</th>
+                                                                        <th>Price</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Child Ski or Board Package (up to 100 cm)</td>
+                                                                        <td>$135</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Youth Ski or Board Package (up to 140 cm)</td>
+                                                                        <td>$189</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Adult Ski or Board Package</td>
+                                                                        <td>$245</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <br>
+                                                            <p>Ski Packages Include Skis - Boots - Bindings - Poles</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- CC TILE SECTION -->
+
+
+                                                <div class="tile-section">
+
+                                                    <div class="column-wrapper">
+                                                        <a href="https://www.hillcrestsports.com/ski-rentals/">
+                                                            <div class="column-1 cc-tile" id="ski">
+                                                                <h3>Ski Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="https://www.hillcrestsports.com/snowboard-rentals/">
+                                                            <div class="column-2 cc-tile" id="snowboard">
+                                                                <h3>Snowboard Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="https://www.hillcrestsports.com/snowshoe-rentals/">
+                                                            <div class="column-1 cc-tile" id="snowshoe">
+                                                                <h3>Snowshoe Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="column-wrapper">
+                                                        <a href="https://www.hillcrestsports.com/kayak-rentals/">
+                                                            <div class="column-1 cc-tile" id="kayak">
+                                                                <h3>Kayak Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                        <a
+                                                            href="https://www.hillcrestsports.com/paddleboard-rentals/">
+                                                            <div class="column-1 cc-tile" id="paddleboard">
+                                                                <h3>Paddle Board Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="https://www.hillcrestsports.com/mountaineering-rentals/">
+                                                            <div class="column-1 cc-tile" id="mountaineering">
+                                                                <h3>Mountaineering Rentals</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <!-- OUTFIT YOURSELF SECTION -->
+
+                                                <div style="background-color: #f5f5f5;">
+                                                    <div class="container hero-image">
+                                                        <div class="inner-container">
+
+                                                            <br>
+                                                            <br>
+                                                            <h2>Outfit yourself for the day or the whole family for the
+                                                                entire season!</h2>
+                                                            <br>
+                                                            <p
+                                                                style="font-size: 16px; color: #999; line-height: 23px; text-align: center;">
+                                                                Hillcrest is conveniently located at the corner of Powell
+                                                                and Burnside at the beginning of Hwy 26. We offer 24 hour
+                                                                rentals. So no rush to get off the slopes and back to town
+                                                                before closing time. Recreational passes available for
+                                                                purchase in-store.</p>
+
+
+                                                            <br>
+                                                            <br>
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-clock-o animated rotateIn delay-1"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Daily Rentals</h3>
+                                                                    <p>All daily rentals are for a full 24 hours! Easy pick
+                                                                        up and drop off. We can outfit you or the whole
+                                                                        family for as long as you need equipment. </p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-snowflake-o animated rotateIn delay-1"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Season Rentals</h3>
+                                                                    <p>You can rent gear for the entire season at a fraction
+                                                                        of the price of a new ski/snowboard setup - perfect
+                                                                        for growing kids!</p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-map-signs animated rotateIn delay-1"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Location</h3>
+                                                                    <p>Hillcrest is conveniently located on the edge Gresham
+                                                                        at the beginning of Highway 26. Easy pick-up and
+                                                                        drop-off.</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="clearer"></div>
+                                                            <br>
+                                                            <br>
+
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-shopping-bag animated rotateIn delay-1-5"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Demos</h3>
+                                                                    <p>Try before you buy. Hillcrest has a robust snowboard
+                                                                        and ski demo fleet with all different types of
+                                                                        shapes and profiles.</p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-usd animated rotateIn delay-1-5"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Cheaper</h3>
+                                                                    <p>Our rental packages are less expensive than all the
+                                                                        local resorts. Skip the long resort rental lines and
+                                                                        pay half the price.</p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="grid12-4 hidden-xs hidden-sm">
+
+                                                                <div
+                                                                    class="feature feature-icon-hover indent indent-size-xl">
+                                                                    <span
+                                                                        class="fa fa-4x fa-calendar animated rotateIn delay-1-5"
+                                                                        style="color:#A4E542;"></span>
+                                                                    <h3>Multi-Day</h3>
+                                                                    <p>With our Multi-Day rental program you can save time
+                                                                        and money. Multiple days are pro-rated depending on
+                                                                        how long you need the gear.</p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="clearer"></div>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!--DON'T FORGET ESSENTIALS SECTION -->
+                                                <!-- <div class="rental-info-area essentials">
+                                                    <center>
+                                                        <h3>Don't forget the essentials</h3>
+
+                                                        Our rental packages include Skis/Snowboard, Boots and Bindings. You
+                                                        can rent a Helmet for an additional charge, but we do not rent
+                                                        goggles, gloves, pants, jackets or any other gear outside of the
+                                                        regular rental package. If you don't have all the gear you need to
+                                                        have a fun day on the mountain, don't fret, we have everything you
+                                                        need to stay warm and dry. Check quick link below to view some of
+                                                        the most "forgotten" items.
+                                                    </center>
+
+
+                                                    <div class="column-wrapper essentials-section">
+
+
+                                                        <a
+                                                            href="https://www.hillcrestsports.com/catalogsearch/result/?q=glove">
+                                                            <div class="column-1 cc-tile" id="gloves"><img
+                                                                    src="https://www.hillcrestsports.com/media/wysiwyg/infortis/ultimo/custom/Gloves-Rental-Page-Final.jpg"
+                                                                    alt="ski and snowboard rentals">
+                                                                <h3>Gloves</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a
+                                                            href="https://www.hillcrestsports.com/catalogsearch/result/?q=goggle">
+                                                            <div class="column-1 cc-tile" id="goggles"><img
+                                                                    src="https://www.hillcrestsports.com/media/wysiwyg/infortis/ultimo/custom/Goggles-Rental-Page-Final.jpg">
+                                                                <h3>Goggles</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a
+                                                            href="https://www.hillcrestsports.com/catalogsearch/result/?q=beanie">
+                                                            <div class="column-1 cc-tile" id="headwear"><img
+                                                                    src="https://www.hillcrestsports.com/media/wysiwyg/infortis/ultimo/custom/Headwear-Rental-Page-Final.jpg">
+                                                                <h3>Headwear</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a
+                                                            href="https://www.hillcrestsports.com/catalogsearch/result/?q=pant">
+                                                            <div class="column-1 cc-tile" id="pants"><img
+                                                                    src="https://www.hillcrestsports.com/media/wysiwyg/infortis/ultimo/custom/Pants-Rental-Page-Final.jpg">
+                                                                <h3>Pants</h3>
+                                                                <div class="tile-overlay"></div>
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div> -->
+
+
+
+
+
+                                            </div><!-- INNER RENTAL SECTION -->
+                                        </div><!-- CITYRANKED CONTENT WRAPPER -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postscript"></div>
+                        </div>
+                    </div>
+                    <div class="main-bottom-container"></div>
+                </div>
+            </div>
+        
+
+
+        {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+            <li>
+                <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                <p>{{content}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}
