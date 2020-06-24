@@ -19,6 +19,40 @@
     {{{region name="below_page_navigation"}}}
     {{/if}}
 
+    
+    <!-- DYLAN -->
+    <style>
+
+        .page-content {
+            background-color: white;
+        }
+
+        .tuning-instructions {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px 20px;
+            
+        }
+
+        .instruction {
+            width: 98%;
+            padding: 10px;
+            margin: 10px;
+            padding-top: 0;
+            margin-top: 0;
+            background-color: #f2f2f2;
+            border-radius: 15px;
+        }
+
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .tuning-instructions {
+            grid-template-columns: auto
+        }
+    }
+        
+    </style>
+
     <div class="page-content">
         {{{region name="above_page_content"}}}
         {{#replace '%%Syndicate%%' page.content}}
@@ -26,17 +60,25 @@
         {{else}}
             <p>{{{page.content}}}</p>
 
-            <!-- DYLAN -->
+            
 
     <div class='tuning-instructions'>
-        <h3>1) Drop the gear off with us</h3>
-        <p>Stop by with the gear you need worked on. Fill out some paperwork, take a claim check and be on your way.</p>
-        <h3>2) We do the work</h3>
-        <p>We wave our wand and fix your equipment. Some issues take more magic than others so it make take more time.</p>
-        <h3>3) Come pick up your stuff</h3>
-        <p>Stop by on the date specified on your claim check and sign the pick-up paperwork to collect your gear.</p>
-        <h3>4) Go shred!</h3>
-        <p>This part is all you. Drive, hike, snow mobile or hot air balloon to the top of a steep snow covered hill and rip back down!</p>
+        <div class='instruction'>
+            <h3>1) Drop the gear off with us</h3>
+            <p>Stop by with the gear you need worked on. Fill out some paperwork, take a claim check and be on your way.</p>
+        </div>
+        <div class='instruction'>
+            <h3>2) We do the work</h3>
+            <p>We wave our wand and fix your equipment. Some issues take more magic than others so it make take more time.</p>
+        </div>
+        <div class='instruction'>
+            <h3>3) Come pick up your stuff</h3>
+            <p>Stop by on the date specified on your claim check and sign the pick-up paperwork to collect your gear.</p>
+        </div>
+        <div class='instruction'>
+            <h3>4) Go shred!</h3>
+            <p>This part is all you. Drive, hike, snow mobile or hot air balloon to the top of a steep snow covered hill and rip back down!</p>
+        </div>
     </div>
 
     <div class='tuning-services'>
