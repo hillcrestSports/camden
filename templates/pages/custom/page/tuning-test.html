@@ -34,6 +34,10 @@
             
         }
 
+        .instruction-title {
+            margin-top: 10px;
+        }
+
         .instruction {
             width: 98%;
             padding: 10px;
@@ -44,6 +48,31 @@
             border-radius: 15px;
         }
 
+        .tuning-services {
+            border: solid #f2f2f2 10px;
+            border-radius: 20px;
+            padding: 8px;
+        }
+
+        .service-type-a {
+            padding: 8px;
+            display: inline-flex;
+        }
+
+        .service-type-b {
+            padding: 8px;
+            background-color: #f2f2f2;
+            border-radius: 15px;
+            display: inline-flex;
+        }
+
+        .service-img {
+            height: 250px;
+            width: 250px;
+            border-radius: 15%;
+        }
+
+        
         @media only screen and (max-width: 768px) {
         /* For mobile phones: */
         .tuning-instructions {
@@ -64,26 +93,26 @@
 
     <div class='tuning-instructions'>
         <div class='instruction'>
-            <h3>1) Drop the gear off with us</h3>
+            <h3 class='instruction-title'>1) Drop the gear off with us</h3>
             <p>Stop by with the gear you need worked on. Fill out some paperwork, take a claim check and be on your way.</p>
         </div>
         <div class='instruction'>
-            <h3>2) We do the work</h3>
+            <h3 class='instruction-title'>2) We do the work</h3>
             <p>We wave our wand and fix your equipment. Some issues take more magic than others so it make take more time.</p>
         </div>
         <div class='instruction'>
-            <h3>3) Come pick up your stuff</h3>
+            <h3 class='instruction-title'>3) Come pick up your stuff</h3>
             <p>Stop by on the date specified on your claim check and sign the pick-up paperwork to collect your gear.</p>
         </div>
         <div class='instruction'>
-            <h3>4) Go shred!</h3>
+            <h3 class='instruction-title'>4) Go shred!</h3>
             <p>This part is all you. Drive, hike, snow mobile or hot air balloon to the top of a steep snow covered hill and rip back down!</p>
         </div>
     </div>
 
     <div class='tuning-services'>
         <div class='service-type-a'>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/belt-wax.png'}}">
             <div class='service-description'>
                 <h3>BELT WAX</h3>
                 <p class='service-headline'>Fast and Easy</p>
@@ -98,10 +127,10 @@
                 <p>Nothing beats a good wax on a blue-bird powder day. We use a temperature appropriate wax and iron it in by hand. Then scrape and buff for the perfect finish.</p>
                 <p>Our techs take the time to make sure it's done right. We clean your base, apply the correct wax, iron it in at a specific temperature for that base and wax type and then let it cool. After cooling we scrape the excess wax by hand and then use a series of brushes to expose the structure of the base material for the best possible hydrophobic effect.</p>
             </div>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/iron-wax.png'}}">
         </div>
         <div class='service-type-a'>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/edge-tune.png'}}">
             <div class='service-description'>
                 <h3>EDGE TUNING</h3>
                 <p class='service-headline'></p>
@@ -116,10 +145,11 @@
                 <p>Instead of a machine we use the well trained touch of a certified technicians hand. Depending on the hardness of the steel used in your edges, we make multiple passes with different grit stones at a user specified degree.</p>
                 <p>We're able to change degree and sharpness along the length of your edge for different snow conditions and racing styles. It's not cheap, but its worth it when hundredths of a second count.</p>
             </div>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/hand-edge.png'}}"
+            alt="Hand Edge">
         </div>
         <div class='service-type-a'>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/base-repair.png'}}">
             <div class='service-description'>
                 <h3>BASE REPAIR</h3>
                 <p class='service-headline'>Patch the holes</p>
@@ -137,7 +167,7 @@
                 <p>When a wax just isn't enough to keep those little dings and scratches at bay any longer, it's time for a Base Grind. A spinning cylinder of magical materials grinds the base fractions of millimeters each pass while re-adding water shedding structure for optimum performance.
                 </p>
             </div>
-            <img>
+            <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/base-grind.png'}}">
         </div>
     </div>
 
