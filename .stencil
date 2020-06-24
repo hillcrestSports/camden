@@ -14,8 +14,7 @@
       "paddleboard-rentals.html": "/paddleboard-rentals/",
       "mountaineering-rentals.html": "/mountaineering-rentals/",
       "kayak-rentals.html": "/kayak-rentals/",
-      "tuning.html": "/tuning/",
-      "tuning-test.html": "/tuning-test/"
+      "tuning.html": "/tuning/"
     },
     "product": {}
   }
