@@ -57,6 +57,7 @@
         .service-type-a {
             padding: 8px;
             display: inline-flex;
+            /* flex-direction: column; */
         }
 
         .service-type-b {
@@ -69,15 +70,55 @@
         .service-img {
             height: 250px;
             width: 250px;
-            border-radius: 15%;
+            border-radius: 10%;
+            padding: 12px;
         }
 
+        .service-headline {
+            font-weight: 800;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px; 
+        }
+
+        .price-item {
+            border: 2px solid #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .price-item:hover {
+            background-color: #f2f2f2;;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 33px;    
+        }
+        
+        .astrix {
+            font-size: 18px;
+        }
         
         @media only screen and (max-width: 768px) {
         /* For mobile phones: */
         .tuning-instructions {
             grid-template-columns: auto
         }
+
+        .service-type-a {
+            flex-direction: column;
+        }
+
+        .service-type-b {
+            flex-direction: column;
+        }
+
+        
     }
         
     </style>
@@ -133,7 +174,7 @@
             <img class='service-img' src="{{cdn 'assets/img/hillcrest/tuning/edge-tune.png'}}">
             <div class='service-description'>
                 <h3>EDGE TUNING</h3>
-                <p class='service-headline'></p>
+                <p class='service-headline'>For that extra edge</p>
                 <p>Your edges are like the tires on your car. They're what hold you to the snow when you turn. getting your baord/skis edged is like replacing your tires and getting an alignment. We sharpen and bevel every inch to a specific standard.</p>
                 <p>Our steady-handed technicians have decades of experience so when you drop off you skis/board you can be confident that it's coming back to you with the best edges you can get on a machine.</p>
             </div>
@@ -173,32 +214,93 @@
 
     <div class='tuning-pricing'>
         <div class='price-table'>
-            <h2>Ski Tuning Prices</h2>
+            <h2>Ski Mounting Prices</h2>
             <div class='price-grid'>
                 <div class='price-item'>
                     <p class='price-name'>
-                        Ski Mount
+                        Full Ski Mount <span class='astrix'></br>(0 items purchased) </span>
                     </p>
                     <p class='price-amount'>
-                        *$68
+                        $68
                     </p>
                 </div>
                 <div class='price-item'>
                     <p class='price-name'>
-                        Adjustment and Test
+                        System Ski Mount <span class='astrix'></br>(0 items purchased) </span>
                     </p>
                     <p class='price-amount'>
-                        *$27
+                        $55
                     </p>
                 </div>
                 <div class='price-item'>
                     <p class='price-name'>
-                        System Mount
+                        Adjustment and Test <span class='astrix'></br>(0 items purchased) </span>
                     </p>
                     <p class='price-amount'>
-                        *$55
+                        $27
                     </p>
                 </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        Full Ski Mount <span class='astrix'></br>(1 item purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $35
+                    </p>
+                </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        System Ski Mount <span class='astrix'></br>(1 item purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $55
+                    </p>
+                </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        Adjustment and Test <span class='astrix'></br>(1 item purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $27
+                    </p>
+                </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        Full Ski Mount <span class='astrix'></br>(2 items purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $68
+                    </p>
+                </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        System Ski Mount <span class='astrix'></br>(2 items purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $55
+                    </p>
+                </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        Adjustment and Test <span class='astrix'></br>(2 items purchased) </span>
+                    </p>
+                    <p class='price-amount'>
+                        $27
+                    </p>
+                </div>
+                <!-- <div class='price-item'>
+                    <p class='price-name'>
+                        Ski Mount (3 items purchased)
+                    </p>
+                    <p class='price-amount'>
+                        $0
+                    </p>
+                </div> -->
+            </div>
+        </div>
+        <div class='price-table'>
+            <h2>Ski Tuning Prices</h2>
+            <div class='price-grid'>
                 <div class='price-item'>
                     <p class='price-name'>
                         Belt Wax
@@ -257,7 +359,7 @@
                 </div>
                 <div class='price-item'>
                     <p class='price-name'>
-                        Race Tune & Wax
+                        Race Tune & Iron Wax
                     </p>
                     <p class='price-amount'>
                         $85
@@ -362,6 +464,14 @@
                         $40/hr
                     </p>
                 </div>
+                <div class='price-item'>
+                    <p class='price-name'>
+                        Stance Alignment & Sole Planing
+                    </p>
+                    <p class='price-amount'>
+                        $250
+                    </p>
+                </div>
             </div>
         </div>
         <div class='price-table'>
@@ -393,6 +503,7 @@
                 </div>
             </div>
         </div>
+        <p class='astrix'>*Pro-rated prices available when purchasing equipment from Hillcrest Ski and Sports.</p>
     </div>
 
         {{/replace}}
