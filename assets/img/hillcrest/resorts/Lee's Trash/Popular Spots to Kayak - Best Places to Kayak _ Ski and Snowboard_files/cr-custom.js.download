@@ -1,0 +1,21 @@
+jQuery( document ).ready( function() {
+
+  (function($) {
+
+  	var head_phone = '<a href="tel:503-665-4455" class="cta-mobile-number">Hillcrest: 503-665-4455</a>';
+  	$('.header-m-top').find('.inner-container').html(head_phone);
+
+  	$(window).scroll(function() {
+  			var scroll = $(window).scrollTop();
+
+  			if (scroll >= 175) {
+  					$(".cta-mobile-number").addClass("cta-scroll");
+  			} else {
+  					$(".cta-mobile-number").removeClass("cta-scroll");
+  			}
+  	});
+
+  	})( jQuery );
+
+
+});
