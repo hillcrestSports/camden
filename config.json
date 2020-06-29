@@ -1,5 +1,5 @@
 {
-  "name": "Camden (3) (1) (1) (1)",
+  "name": "Camden (3) (1) (1) (1) (7)",
   "version": "1.5.0",
   "meta": {
     "price": 23500,
@@ -225,7 +225,7 @@
     "alert-color": "#333333",
     "alert-color-alt": "#ffffff",
     "storeName-color": "#333333",
-    "body-bg": "#f2f2f2",
+    "body-bg": "#ffffff",
     "footer-backgroundColor": "#414141",
     "navUser-color": "#333333",
     "navUser-color-hover": "#448ccb",
@@ -742,7 +742,7 @@
         "alert-color": "#333333",
         "alert-color-alt": "#ffffff",
         "storeName-color": "#333333",
-        "body-bg": "#f2f2f2",
+        "body-bg": "#ffffff",
         "footer-backgroundColor": "#292929",
         "navUser-color": "#333333",
         "navUser-color-hover": "#f79b34",
@@ -875,7 +875,7 @@
         "global_banner_message_3": "",
         "global_banner_link_3": "",
         "global_banner_icon_3": "",
-        "global_banner_backgroundColor": "#D14343",
+        "global_banner_backgroundColor": "#292929",
         "global_banner_foregroundColor": "#333333",
         "show_newsletter_popup": false,
         "newsletter_popup_image": "",
