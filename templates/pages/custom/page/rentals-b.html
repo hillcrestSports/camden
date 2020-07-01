@@ -1,7 +1,6 @@
 {{#partial "page"}}
 
 <div class="container">
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     <main class="page">
         {{#unless theme_settings.hide_page_heading }}
         <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
@@ -17,25 +16,81 @@
         </nav>
         {{/if}}
 
-        <style>
-            .rental-top {
-                background-image: url("{{cdn 'assets/img/hillcrest/rentals/all-rentals.jpg'}}");
-                min-height: 400px;
-                background-size: cover;
-                background-position: center bottom;
-                max-width: 1895px;
-                margin: 0 auto;
-                position: relative;
-            }
-        </style>
-
         <div class='page-content'>
 
+            <script>
+                function rentalCardFlip() {
+                    const sideA = document.getElementById('rental-card-front');
+                    const sideB = document.getElementById('rental-card-back');
+                    if (sideA.style.display != 'none') {
+                        sideA.style.display = 'none';
+                        sideB.style.display = 'block';
+                    }
+                }
 
-            <div class="rental-top">
-                <!-- <h1>Rentals</h1> -->
+                function rentalCardFlipB() {
+                    const sideA = document.getElementById('rental-card-front');
+                    const sideB = document.getElementById('rental-card-back');
+                    if (sideB.style.display != 'none') {
+                        sideB.style.display = 'none';
+                        sideA.style.display = 'block';
+                    }
+                }
+            </script>
+
+            <style>
+                #rental-card-front {
+                    background-image: url("{{cdn 'assets/img/hillcrest/rentals/all-rentals.jpg'}}");
+                    min-height: 400px;
+                    background-size: cover;
+                    background-position: center bottom;
+                    max-width: 1895px;
+                    margin: 0 auto;
+                    position: relative;
+               }
+
+                
+
+            </style>
+            <div id='rental-card-front' onclick="rentalCardFlip()">
 
             </div>
+
+
+            <style>
+                #rental-card-back {
+                    background-color: #d4ff93;
+                    min-height: 400px;
+                    background-size: cover;
+                    left: 0;
+                    top: 373px;
+                    padding: 12px;
+                    display: none;
+                }
+
+
+            </style>
+            <div id='rental-card-back' onclick="rentalCardFlipB()">
+                <div id='ski-card' class='rental-card'>
+                    <p>Ski Rentals</p>
+                </div>
+                <div id='snowboard-card' class='rental-card'>
+                    <p>Snowboard Rentals</p>
+                </div>
+                <div id='snowshoe-card' class='rental-card'>
+                    <p>Snowshoe Rentals</p>
+                </div>
+                <div id='kayak-card' class='rental-card'>
+                    <p>Kayak Rentals</p>
+                </div>
+                <div id='paddleboard-card' class='rental-card'>
+                    <p>Paddleboard Rentals</p>
+                </div>
+                <div id='mountaineering-card' class='rental-card'>
+                    <p>Mountaineering Rentals</p>
+                </div>
+            </div>
+
 
             <style>
                 .general-info {
@@ -52,8 +107,8 @@
 
                 .policy {
                     width: 90%;
-                    margin: auto auto;
-                    padding: 5px;
+                    margin: 5px auto;
+                    padding: 0 8px;
                     border: solid 2px #d4ff93;
                 }
                 
@@ -65,7 +120,7 @@
 
                 
             }
-            </style>
+            </style>          
             <div class='general-info'>
                 <div class='info-top'>
                   <h2>OUTFIT YOURSELF FOR THE DAY OR THE WHOLE FAMILY FOR THE ENTIRE SEASON!</h2>
@@ -97,8 +152,7 @@
                     <p>With our Multi-Day rental program you can save time and money. Multiple days are pro-rated depending on how long you need the gear.</p>
                   </div>
                 </div>
-              </div>
-            
+            </div>
 
         </div>
 
