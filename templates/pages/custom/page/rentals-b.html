@@ -244,7 +244,7 @@
 
                     #rental-menu {
                         background-color: #4C86A8;
-                        width: calc(100% + 30vw);
+                        width: 240px;
                         padding: 10px;
                         padding: 0px;
                         height: 310px;
@@ -265,13 +265,11 @@
                     }
 
                     .rentals-body {
-                        width: 1003px;
+                        text-align: center;
                     }
 
                     .rentals-title {
-                        margin: 0 auto;
                         color: #4C86A8;
-
                     }
 
                     #ski-body {
@@ -304,11 +302,17 @@
                           
                     }
 
-                    @media only screen and (max-width: 768px) {
+                    @media only screen and (max-width: 500px) {
                     /* For mobile phones: */
                             #rental-menu {
-                                width: 768px;
+                                width: 240px;
                             }
+                        #rental-card-back {
+                            height: 620px;
+                            grid-template-columns: auto;
+                        }
+
+
                     }
 
                 </style>
@@ -334,42 +338,42 @@
                         </div>
                     </div>
                     <div class='rentals-body'>
-                        <div id='ski-body'>
+                        <div class='side-b-body' id='ski-body'>
                             <h1 class='rentals-title'>
                                 Ski Rentals
                             </h1>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
-                        <div id='snowboard-body'>
+                        <div class='side-b-body' id='snowboard-body'>
                             <h1 class='rentals-title'>
                                 Snowboard Rentals
                             </h1>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
-                        <div id='snowshoe-body'>
+                        <div class='side-b-body' id='snowshoe-body'>
                             <h1 class='rentals-title'>
                                 Snowshoe Rentals
                             </h1>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
-                        <div id='kayak-body'>
+                        <div class='side-b-body' id='kayak-body'>
                             <h1 class='rentals-title'>
                                 Kayak Rentals
                             </h1>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
-                        <div id='paddleboard-body'>
+                        <div class='side-b-body' id='paddleboard-body'>
                             <h1 class='rentals-title'>
                                 Paddleboard Rentals
                             </h1>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
-                        <div id='mountaineering-body'>
+                        <div class='side-b-body' id='mountaineering-body'>
                             <h1 class='rentals-title'>
                                 Mountaineering Rentals
                             </h1>
@@ -384,24 +388,44 @@
 
             <style>
                 .general-info {
-                    border: solid 5px #4c86a8;
-                    border-radius: 10px;
                     padding: 10px;
-                    margin: 10px;
+                    background-color: #e4e4e4;
                 }
 
                 .info-body {
                     display: grid;
+                    grid-gap: 0px;
                     grid-template-columns: auto auto;
                 }
 
                 .policy {
                     width: 90%;
-                    margin: 5px auto;
-                    padding: 0 8px;
-                    border: solid 2px #d4ff93;
+                    margin: 0 auto;
+                    padding: 0 4px;
+                    border-radius: 50%;
+                }
+
+                .policy-title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    background-color: #a4e542;
+                    padding: 2px 15px;
+                    border-radius: 10px;
                 }
                 
+                .policy p { 
+                    background-color: white;
+                    padding: 5px;
+                }
+
+                .policy-p {
+                    border-radius: 10px;
+                }
+
+                .para {
+                    padding-left: 8px;
+                }
+
                 @media only screen and (max-width: 768px) {
                 /* For mobile phones: */
                 .info-body {
@@ -414,32 +438,26 @@
             <div class='general-info'>
                 <div class='info-top'>
                   <h2>OUTFIT YOURSELF FOR THE DAY OR THE WHOLE FAMILY FOR THE ENTIRE SEASON!</h2>
-                  <p>Hillcrest is conveniently located at the corner of Powell and Burnside at the beginning of Hwy 26. We offer 24 hour rentals. So no rush to get off the slopes and back to town before closing time. Recreational passes available for purchase in-store.</p>
+                  <p class='policy-p'>Hillcrest is conveniently located at the corner of Powell and Burnside at the beginning of Hwy 26. We offer 24 hour rentals. So no rush to get off the slopes and back to town before closing time. Recreational passes available for purchase in-store.</p>
                 </div>  
                 <div class='info-body'>
                   <div class='policy'>
-                    <h3>Daily Rentals</h3>
-                    <p>All daily rentals are for a full 24 hours! Easy pick up and drop off. We can outfit you or the whole family for as long as you need equipment.</p>
+                    <p class='policy-p'><span class='policy-title'>Daily Rentals </span><span class='para'>All daily rentals are for a full 24 hours! Easy pick up and drop off. We can outfit you or the whole family for as long as you need equipment.</span></p>
                   </div>
                   <div class='policy'>
-                    <h3>Season Rentals</h3>
-                    <p>You can rent gear for the entire season at a fraction of the price of a new ski/snowboard setup - perfect for growing kids!</p>
+                    <p class='policy-p'><span class='policy-title'>Multi-Day </span><span class='para'>With our Multi-Day rental program you can save time and money. Multiple days are pro-rated depending on how long you need the gear.</span></p>
                   </div>
                   <div class='policy'>
-                    <h3>Location</h3>
-                    <p>Hillcrest is conveniently located on the edge Gresham at the beginning of Highway 26. Easy pick-up and drop-off.</p>
+                    <p class='policy-p'><span class='policy-title'>Season Rentals </span><span class='para'>You can rent gear for the entire season at a fraction of the price of a new ski/snowboard setup - perfect for growing kids!</span></p>
                   </div>
                   <div class='policy'>
-                    <h3>Demos</h3>
-                    <p>Try before you buy. Hillcrest has a robust snowboard and ski demo fleet with all different types of shapes and profiles.</p>
+                    <p class='policy-p'><span class='policy-title'>Demos </span><span class='para'>Try before you buy. Hillcrest has a robust snowboard and ski demo fleet with all different types of shapes and profiles.</span></p>
                   </div>
                   <div class='policy'>
-                    <h3>Cheaper</h3>
-                    <p>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay half the price.</p>
-                  </div>
+                    <p class='policy-p'><span class='policy-title'>Location </span><span class='para'>Hillcrest is conveniently located on the edge Gresham at the beginning of Highway 26. Easy pick-up and drop-off.</span></p>
+                  </div>  
                   <div class='policy'>
-                    <h3>Multi-Day</h3>
-                    <p>With our Multi-Day rental program you can save time and money. Multiple days are pro-rated depending on how long you need the gear.</p>
+                    <p class='policy-p'><span class='policy-title'>Cheaper </span><span class='para'>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay half the price.</span></p>
                   </div>
                 </div>
             </div>
