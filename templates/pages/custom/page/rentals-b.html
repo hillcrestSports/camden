@@ -244,7 +244,7 @@
 
                     #rental-menu {
                         background-color: #4C86A8;
-                        width: 1003px;
+                        width: calc(100% + 30vw);
                         padding: 10px;
                         padding: 0px;
                         height: 310px;
@@ -264,17 +264,48 @@
                         font-size: 16px;
                     }
 
+                    .rentals-body {
+                        width: 1003px;
+                    }
+
                     .rentals-title {
                         margin: 0 auto;
                         color: #4C86A8;
+
                     }
 
                     #ski-body {
                         display: none;
                     }
 
+                    #snowboard-body {
+                        display: none;
+                    }
+
+                    #snowshoe-body {
+                        display: none;
+                    }
+
+                    #kayak-body {
+                        display: none;
+                    }
+
+                    #paddleboard-body {
+                        display: none;
+                    }
+
+                    #mountaineering-body {
+                        display: none;
+                    }
+
+                    
+                    @media only screen and (max-width: 1024px) {
+                    /*For smaller laptops: */
+                          
+                    }
+
                     @media only screen and (max-width: 768px) {
-        /* For mobile phones: */
+                    /* For mobile phones: */
                             #rental-menu {
                                 width: 768px;
                             }
