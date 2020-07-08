@@ -17,19 +17,27 @@
         {{/if}}
 
         <style>
-            .page-content {
+
+            /* .page-content {
+                position: initial;
+                top: -21px;
+                z-index: 0;
+            } */
+
+            #rentals-background {
                 background-image:url("{{cdn 'assets/img/hillcrest/rentals/paddle-board-rental.jpg'}}");
-                background
+                position: sticky;
+                height: 1200px;
+                z-index: -0.1;
+            }
+
+            #main-rental-card {
+                margin-top: 20px;
             }
         </style>
 
         <div class='page-content'>
-
-            <style>
-                    /* #main-rental-card {
-                        border-radius: 50%;
-                    } */
-            </style>
+            <div id='rentals-background'></div>
             <div id='main-rental-card'>
 
                 <script>
