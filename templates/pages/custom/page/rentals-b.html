@@ -294,22 +294,33 @@
                         text-align: center;
                     }
 
-                    .rental-icon-a {
-                        height: 75px;
+                    .rental-icon {
+                        height: 95px;
                         position: absolute;
-                        left: 35%;
+                        left: 265px;
                     }
 
                     .rental-icon-b {
-                        height: 75px;
-                        position: absolute;
-                        right: 10%;
+                       height: 110px;
                     }
 
-                    .rentals-title {
+                    .rental-icon-c {
+                        left: 250px;
+                        height: 100px;
+                    }
+
+                    .rentals-body-top {
                         color: #4C86A8;
                         font-size: 50px;
                         padding-top: 8px;
+                    }
+
+                    .rentals-title {
+                        margin-left: 80px;
+                    }
+
+                    .rentals-title-long {
+                        margin-left: 70px;
                     }
 
                     #ski-body {
@@ -344,13 +355,20 @@
 
                     @media only screen and (max-width: 500px) {
                     /* For mobile phones: */
-                            #rental-menu {
-                                width: 240px;
-                            }
+
+                    /* ADD query to remove icons at smaller VW */
+
+
+                        #rental-menu {
+                            width: 240px;
+                        }
+
                         #rental-card-back {
                             height: 620px;
                             grid-template-columns: auto;
                         }
+
+                      
 
 
                     }
@@ -379,48 +397,72 @@
                     </div>
                     <div class='rentals-body'>
                         <div class='side-b-body' id='ski-body'>
-                            <div class='rent-cat-head'>
-                                <h1 class='rentals-title'>
-                                    <img class='rental-icon-a' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
-                                    Ski Rentals
-                                    <img class='rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
+                                    <span class='rentals-title'>
+                                        Ski Rentals
+                                    </span>
                                 </h1>
                             </div>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
-                            <h1 class='rentals-title'>
-                                Snowboard Rentals
-                            </h1>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/snowboard-icon.png'}}">
+                                    <span class='rentals-title'>
+                                        Snowboard Rentals
+                                    </span>
+                                </h1>
+                            </div>
                         </div>
                         <div class='side-b-body' id='snowshoe-body'>
-                            <h1 class='rentals-title'>
-                                Snowshoe Rentals
-                            </h1>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/snowshoes-icon.png'}}">
+                                    <span class='rentals-title'>
+                                        Snowshoe Rentals
+                                    </span>
+                                </h1>
+                            </div>
                         </div>
                         <div class='side-b-body' id='kayak-body'>
-                            <h1 class='rentals-title'>
-                                Kayak Rentals
-                            </h1>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
+                                    <span class='rentals-title'>
+                                        Kayak Rentals
+                                    </span>
+                                </h1>
+                            </div>
                         </div>
                         <div class='side-b-body' id='paddleboard-body'>
-                            <h1 class='rentals-title'>
-                                Paddleboard Rentals
-                            </h1>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/paddleboard-icon.png'}}">
+                                    <span class='rentals-title-long'>
+                                        Paddleboard Rentals
+                                    </span>
+                                </h1>
+                            </div>
                         </div>
                         <div class='side-b-body' id='mountaineering-body'>
-                            <h1 class='rentals-title'>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/mountaineering-icon.png'}}">
+                                    <span class='rentals-title-long'>
+                                        Mountaineering Rentals
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+
+                        <div class='side-b-body' id='mountaineering-body'>
+                            <div class='rentals-body'>
                                 Mountaineering Rentals
-                            </h1>
+                            </div>
                             <div class='rentals-price-btn'></div>
                             <div class='rentals-info-btn'></div>
                         </div>
