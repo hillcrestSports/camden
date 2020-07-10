@@ -309,6 +309,12 @@
                         height: 100px;
                     }
 
+                    .rental-icon-d {
+                        height: 110px;
+                        position: absolute;
+                        right: 20px;
+                    }
+
                     .rentals-body-top {
                         color: #4C86A8;
                         font-size: 50px;
@@ -316,11 +322,41 @@
                     }
 
                     .rentals-title {
-                        margin-left: 80px;
+                        margin: 0 80px;
+
                     }
 
                     .rentals-title-long {
                         margin-left: 70px;
+                    }
+
+                    .rentals-price-btn {
+                        display: inline-flex;
+                    }
+
+                    .rentals-price-btn p {
+                        border: 2px double #4C86A8;
+                        width: 125px;
+                        height: 110px;
+                        border-radius: 20px;
+                        font-size: 33px;
+                        margin-right: 20%;
+                        padding: 5px;
+                    }
+
+                    /* .youth-btn {
+                        position: absolute;
+                        right: 20%;
+                        top: 100px;
+                    } */
+
+                    .etc-btn {
+                        border: 2px double #4C86A8;
+                        height: 110%;
+                        border-radius: 20px;
+                        font-size: 25px;
+                        width: 150px;
+                        margin: 0 auto;
                     }
 
                     #ski-body {
@@ -367,10 +403,6 @@
                             height: 620px;
                             grid-template-columns: auto;
                         }
-
-                      
-
-
                     }
 
                 </style>
@@ -403,10 +435,14 @@
                                     <span class='rentals-title'>
                                         Ski Rentals
                                     </span>
+                                    <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
                                 </h1>
                             </div>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
+                            <div class='rentals-price-btn'>
+                                <p>Adult</br>Prices</p>
+                                <p class='youth-btn'>Youth</br>Prices</p>
+                            </div>
+                            <p class='etc-btn'>Accessories</p>
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
                             <div class='rental-catagory-main'>
@@ -431,10 +467,11 @@
                         <div class='side-b-body' id='kayak-body'>
                             <div class='rental-catagory-main'>
                                 <h1 class='rentals-body-top'>
-                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
+                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
                                     <span class='rentals-title'>
                                         Kayak Rentals
                                     </span>
+                                    <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
                                 </h1>
                             </div>
                         </div>
@@ -457,14 +494,6 @@
                                     </span>
                                 </h1>
                             </div>
-                        </div>
-
-                        <div class='side-b-body' id='mountaineering-body'>
-                            <div class='rentals-body'>
-                                Mountaineering Rentals
-                            </div>
-                            <div class='rentals-price-btn'></div>
-                            <div class='rentals-info-btn'></div>
                         </div>
                     </div>
                 </div>
