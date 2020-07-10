@@ -74,6 +74,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display = 'none') {
                             skiBody.style.display = 'inline-block';
                         }
@@ -101,6 +105,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display != 'none') {
                             skiBody.style.display = 'none';
                         }
@@ -129,6 +137,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display != 'none') {
                             skiBody.style.display = 'none';
                         }
@@ -156,6 +168,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display != 'none') {
                             skiBody.style.display = 'none';
                         }
@@ -183,6 +199,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display != 'none') {
                             skiBody.style.display = 'none';
                         }
@@ -210,6 +230,10 @@
                         const kayakBody = document.getElementById('kayak-body');
                         const paddleboardBody = document.getElementById('paddleboard-body');
                         const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (outerwearBody.style.display != 'none') {
+                            outerwearBody.style.display = 'none';
+                        }
                         if (skiBody.style.display != 'none') {
                             skiBody.style.display = 'none';
                         }
@@ -227,6 +251,37 @@
                         }
                         if (mountaineeringBody.style.display = 'none') {
                             mountaineeringBody.style.display = 'inline-block';
+                        }
+                    }
+
+                    function outerwearMenuClick() {
+                        const skiBody = document.getElementById('ski-body');
+                        const snowboardBody = document.getElementById('snowboard-body');
+                        const snowshoeBody = document.getElementById('snowshoe-body');
+                        const kayakBody = document.getElementById('kayak-body');
+                        const paddleboardBody = document.getElementById('paddleboard-body');
+                        const mountaineeringBody = document.getElementById('mountaineering-body');
+                        const outerwearBody = document.getElementById('outerwear-body');
+                        if (skiBody.style.display != 'none') {
+                            skiBody.style.display = 'none';
+                        }
+                        if (snowboardBody.style.display != 'none') {
+                            snowboardBody.style.display = 'none';
+                        }
+                        if (snowshoeBody.style.display != 'none') {
+                            snowshoeBody.style.display = 'none';
+                        }
+                        if (kayakBody.style.display != 'none') {
+                            kayakBody.style.display = 'none';
+                        }
+                        if (paddleboardBody.style.display != 'none') {
+                            paddleboardBody.style.display = 'none';
+                        }
+                        if (mountaineeringBody.style.display != 'none') {
+                            mountaineeringBody.style.display = 'none';
+                        }
+                        if (outerwearBody.style.display = 'none') {
+                            outerwearBody.style.display = 'inline-block';
                         }
                     }
 
@@ -252,7 +307,7 @@
 
                     #rental-card-back {
                         background-color: #a4e542;
-                        height: 310px;
+                        height: 360px;
                         background-size: cover;
                         left: 0;
                         padding: 0;
@@ -271,7 +326,7 @@
                         width: 240px;
                         padding: 10px;
                         padding: 0px;
-                        height: 310px;
+                        height: 360px;
                         border-radius: 10px;
                         border-bottom-left-radius: 0;
                         border-bottom-right-radius: 0;
@@ -304,6 +359,11 @@
                        height: 110px;
                     }
 
+                    .rental-icon-bb {
+                       height: 110px;
+                       width: 80px;
+                    }
+
                     .rental-icon-c {
                         left: 250px;
                         height: 100px;
@@ -330,11 +390,12 @@
                         margin-left: 70px;
                     }
 
-                    .rentals-price-btn {
+                    .rentals-btns {
                         display: inline-flex;
+                        width: 60%;
                     }
 
-                    .rentals-price-btn p {
+                    .rentals-btns p {
                         border: 2px double #4C86A8;
                         width: 125px;
                         height: 110px;
@@ -344,20 +405,24 @@
                         padding: 5px;
                     }
 
-                    /* .youth-btn {
-                        position: absolute;
-                        right: 20%;
-                        top: 100px;
-                    } */
+                    .rentals-btns-b {
+                        display: inline-flex;
+                        width: 80%;
+                    }
 
-                    .etc-btn {
+                    .rentals-btns-b p {
                         border: 2px double #4C86A8;
-                        height: 110%;
+                        height: 75px;
                         border-radius: 20px;
                         font-size: 25px;
                         width: 150px;
                         margin: 0 auto;
                     }
+
+                    .rentals-btns-b {
+                        display: inline-flex;
+                    }
+
 
                     #ski-body {
                         display: none;
@@ -380,6 +445,10 @@
                     }
 
                     #mountaineering-body {
+                        display: none;
+                    }
+
+                    #outerwear-body {
                         display: none;
                     }
 
@@ -426,6 +495,9 @@
                         <div id='mountaineering-card' class='rent-menu-item' onClick='mountaineeringMenuClick()'>
                             <p>Mountaineering Rentals</p>
                         </div>
+                        <div id='outerwear-card' class='rent-menu-item' onClick='outerwearMenuClick()'>
+                            <p>Outerwear Rentals</p>
+                        </div>
                     </div>
                     <div class='rentals-body'>
                         <div class='side-b-body' id='ski-body'>
@@ -438,31 +510,43 @@
                                     <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
                                 </h1>
                             </div>
-                            <div class='rentals-price-btn'>
+                            <div class='rentals-btns'>
                                 <p>Adult</br>Prices</p>
                                 <p class='youth-btn'>Youth</br>Prices</p>
                             </div>
-                            <p class='etc-btn'>Accessories</p>
+                            <div class='rentals-btns-b'>
+                                <p>Crosscounty</br>Ski Prices</p>
+                                <p>Poles &</br>Accessories</p>
+                            </div>
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
                             <div class='rental-catagory-main'>
                                 <h1 class='rentals-body-top'>
                                     <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/snowboard-icon.png'}}">
-                                    <span class='rentals-title'>
+                                    <span class='rentals-title-long'>
                                         Snowboard Rentals
                                     </span>
                                 </h1>
+                            </div>
+                            <div class='rentals-btns'>
+                                <p>Adult</br>Prices</p>
+                                <p class='youth-btn'>Youth</br>Prices</p>
                             </div>
                         </div>
                         <div class='side-b-body' id='snowshoe-body'>
                             <div class='rental-catagory-main'>
                                 <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/snowshoes-icon.png'}}">
-                                    <span class='rentals-title'>
+                                    <img class='rental-icon rental-icon-bb' src="{{cdn 'assets/img/hillcrest/icons/snowshoes-icon.png'}}">
+                                    <span class='rentals-title-long'>
                                         Snowshoe Rentals
                                     </span>
                                 </h1>
                             </div>
+                            <div class='rentals-btns'>
+                                <p>Adult</br>Prices</p>
+                                <p class='youth-btn'>Youth</br>Prices</p>
+                            </div>
+                            <p class='etc-btn'>Accessories</p>
                         </div>
                         <div class='side-b-body' id='kayak-body'>
                             <div class='rental-catagory-main'>
@@ -491,6 +575,16 @@
                                     <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/mountaineering-icon.png'}}">
                                     <span class='rentals-title-long'>
                                         Mountaineering Rentals
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class='side-b-body' id='outerwear-body'>
+                            <div class='rental-catagory-main'>
+                                <h1 class='rentals-body-top'>
+                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/mountaineering-icon.png'}}">
+                                    <span class='rentals-title-long'>
+                                        Outerwear Rentals
                                     </span>
                                 </h1>
                             </div>
