@@ -32,7 +32,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-image:url("{{cdn 'assets/img/hillcrest/rentals/paddle-board-rental.jpg'}}");
+                background-image:url("{{cdn 'assets/img/hillcrest/rentals/rentals-background.png'}}");
                 position: fixed;
                 z-index: -1;
             }
@@ -306,8 +306,8 @@
                 <style>
 
                     #rental-card-back {
-                        background-color: #a4e542;
-                        height: 360px;
+                        background-color: #cc4749;
+                        min-height: 360px;
                         background-size: cover;
                         left: 0;
                         padding: 0;
@@ -338,7 +338,7 @@
                     }
 
                     .rent-menu-item:hover {
-                        background-color: #d4ff93;
+                        background-color: #f1a500;
                     }
 
                     .rent-menu-item p {
@@ -390,12 +390,39 @@
                         margin-left: 70px;
                     }
 
-                    .rentals-btns {
-                        display: inline-flex;
-                        width: 60%;
+                    .rentals-body-middle {
+                        margin-top: 50px;
+                        padding: 6px;
+                        font-size: 16px;
                     }
 
-                    .rentals-btns p {
+                    .rentals-body-bottom {
+                        top: 400px;
+                        background-color: antiquewhite;
+                        padding: 10px;
+                    }
+
+                    .rentals-btns {
+                        position: absolute;
+                        left: 0;
+                        top: 360px;
+                        /* top: 392px; */
+                        width: 240px;
+                        background-color: #f1a500;
+                        padding-top: 20px;
+                        padding-bottom: 15px;
+                    }
+
+                    .rentals-btns-a {
+                        display: inline-block;
+                        width: 60%;
+                        padding: 20px, 0;
+                        padding-left: 10px; 
+                        margin: 0 auto;
+                    }
+
+                    
+                    .rentals-btns-a p {
                         border: 2px double #4C86A8;
                         width: 125px;
                         height: 110px;
@@ -406,7 +433,7 @@
                     }
 
                     .rentals-btns-b {
-                        display: inline-flex;
+                        display: inline-block;
                         width: 80%;
                     }
 
@@ -419,8 +446,21 @@
                         margin: 0 auto;
                     }
 
-                    .rentals-btns-b {
-                        display: inline-flex;
+                    .rentals-btns-c {
+                        display: inline-block;
+                        width: 80%;
+                    }
+
+                    
+                    .rentals-btns-c p {
+                        border: 2px double #4C86A8;
+                        width: 150px;
+                        height: 60px;
+                        border-radius: 20px;
+                        font-size: 33px;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                        padding: 5px;
                     }
 
 
@@ -510,13 +550,52 @@
                                     <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
                                 </h1>
                             </div>
-                            <div class='rentals-btns'>
-                                <p>Adult</br>Prices</p>
-                                <p class='youth-btn'>Youth</br>Prices</p>
+                            <div class='rentals-body-middle'>
+                                <p>
+                                    Enjoy the slopes with Hillcrest Ski & Sports’ ski rentals! We offer a variety of ski equipment rentals including men’s skis and boots, women’s skis and boots, and kid’s skis and boots. Every ski package also comes with bindings and poles. New to skiing? We have experienced trainers to properly fit you for your equipment-- depending on your skill level, and they’ll also provide a demonstration for you. All rentals are on a first-come, first-serve basis. Once you rent your ski equipment, you’ll have it for 24 hours, however, longer rentals are available.
+                                </p>
                             </div>
-                            <div class='rentals-btns-b'>
-                                <p>Crosscounty</br>Ski Prices</p>
-                                <p>Poles &</br>Accessories</p>
+                            <div class='rentals-body-bottom'>
+                                <h2>
+                                    Ski Package Rental
+                                </h2>
+                                <p>
+                                    To have an enjoyable skiing experience, it’s important to have a pair of skis that are the perfect length for you. To do this, we at Hillcrest Sports will measure your height and weight, learn your skill level as well as learn what terrain you’ll be on. The type of skis we’ll give you will be based on the type of skiing you plan to do.
+                                </br>
+                                    All-Mountain skis are great for a mix of terrain including groomed and powder. They are suited for all skill levels and age groups.
+
+                                </br>
+                                    All-Mountain wide skies work well in groomed areas and powder areas. They are slightly wider in the waist than the all-mountain ski.
+                                </br>
+                                    Powder skis are best if you plan on skiing in deep powder snow.
+                                </p>
+                                <h2>
+                                    Rental Ski Boots
+                                </h2>
+                                <p>
+                                    Your ski boots are perhaps the most important part of your rental package. If they’re too stiff, too small or too large, you will not have a great experience. This is why we at Hillcrest Sports always have you try on the boot first and if it’s not comfortable, we’ll try other sizes and models until we find you a perfect match. Everyone has different feet sizes and shapes as well as skill levels when it comes to skiing and all should be taken into consideration when selecting a boot.
+                                </p>
+                                <h2>
+                                    Rental Ski Poles
+                                </h2>
+                                <p>
+                                    Your ski poles help you balance and time your turns. Whether you’ve forgotten, misplaced, or broke your own ski poles, we at Hillcrest provide rental ski poles for the low price of $7. We have adult and children’s ski poles for rent.
+                                </p>
+                            </div>
+                            <div class='rentals-btns'>
+                                <div class='rentals-btns-a'>
+                                    <p>Adult Prices</p>
+                                    <p class='youth-btn'>Youth Prices</p>
+                                </div>
+                                <div class='rentals-btns-b'>
+                                    <p>Crosscounty</br>Ski Prices</p>
+                                </br>
+                                    <p>Poles &</br>Accessories</p>
+                                </div>
+                                <div class='rentals-btns-c'>
+                                    <p>Clothing</p>
+                                </div>
+
                             </div>
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
@@ -528,9 +607,33 @@
                                     </span>
                                 </h1>
                             </div>
+                            <div class='rentals-body-middle'>
+                                <p>
+                                    Hillcrest Ski & Sports has everything you need for your next snowboarding adventure in the Portland area! Our snowboard packages include men’s snowboards, women’s snowboards, and kid’s snowboards complete with boots and bindings. Have your own snowboard and just need boots? We also rent out single equipment including men’s snowboard boots, women’s snowboard boots, and kid’s snowboard boots. If you’re new to the sport, we’ll help make sure you’re properly fitted to your boots and snowboard. We also offer demonstration snowboard packages. We rent out our equipment on a first-come-first-serve basis and once you receive your snowboard equipment, you’ll have it for a full 24 hours, however, longer rentals are available.
+                                </p>
+                            </div>
+                            <div class='rentals-body-bottom'>
+                                <h2>
+                                    Snowboard Package Rentals
+                                </h2>
+                                <p>
+                                    Different boards are designed for different skill levels. And we at Hillcrest cater to them all. We provide snowboards for beginners, intermediate, advanced, and junior boarders. Keep in mind if you’re only doing a snowboard rental, you’ll want to bring your boots in at the time of pick-up so they can be properly fitted. If you’re getting the snowboard rental package, the fitting is already included.
+                                </p>
+                                <h2>
+                                    Snow Gear For Rent
+                                </h2>
+                                <p>
+                                    Be out on the slopes for as long as you want with our snowboard boot rental. We provide high-quality waterproof boots in several different brands and models to cater to everyone’s shape, size, and skill level. We want you to be comfortable during your snowboarding adventure, which is why we not only fit the boots to you, but to your snowboard as well.
+                                </p>
+                            </div>
                             <div class='rentals-btns'>
-                                <p>Adult</br>Prices</p>
-                                <p class='youth-btn'>Youth</br>Prices</p>
+                                <div class='rentals-btns-a'>
+                                    <p>Adult</br>Prices</p>
+                                    <p class='youth-btn'>Youth</br>Prices</p>
+                                </div>
+                                <div class='rentals-btns-c'>
+                                    <p>Clothing</p>
+                                </div>
                             </div>
                         </div>
                         <div class='side-b-body' id='snowshoe-body'>
@@ -545,8 +648,8 @@
                             <div class='rentals-btns'>
                                 <p>Adult</br>Prices</p>
                                 <p class='youth-btn'>Youth</br>Prices</p>
+                                <p class='etc-btn'>Accessories</p>
                             </div>
-                            <p class='etc-btn'>Accessories</p>
                         </div>
                         <div class='side-b-body' id='kayak-body'>
                             <div class='rental-catagory-main'>
