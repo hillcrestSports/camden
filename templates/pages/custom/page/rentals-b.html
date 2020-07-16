@@ -39,12 +39,101 @@
 
             #main-rental-card {
                 margin-top: 20px;
+                margin-bottom: 20px;
                 z-index: 1;
             }
         </style>
 
         <div class='page-content'>
             <div id='rentals-background'></div>
+
+            <style>
+                .general-info {
+                    padding: 10px;
+                    background-color: rgba(228,228,228,.5);
+                    z-index: 2;
+                    margin: 0 auto;
+                }
+
+                .info-top {
+                    background-color: rgba(255,255,255,.75);
+                    padding: 10px;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .info-body {
+                    display: grid;
+                    grid-gap: 0px;
+                    grid-template-columns: auto auto;
+                }
+
+                .policy {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0 4px;
+                    border-radius: 50%;
+                }
+
+                .policy-title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: white;
+                    background-color: #4C86A8;
+                    padding: 2px 15px;
+                    border-radius: 10px;
+                }
+                
+                .policy p { 
+                    background-color: white;
+                    padding: 5px;
+                }
+
+                .policy-p {
+                    border-radius: 10px;
+                }
+
+                .para {
+                    padding-left: 8px;
+                }
+
+                @media only screen and (min-width: 1044px) {
+                /* For laptops: */
+                .general-info {
+                    max-width: 960px; 
+                }   
+            }
+
+                @media only screen and (max-width: 768px) {
+                /* For mobile phones: */
+                .info-body {
+                    grid-template-columns: auto;
+                }
+            }
+           
+            </style>          
+            <div class='general-info'>
+                <div class='info-top'>
+                  <h2>OUTFIT YOURSELF FOR THE DAY OR THE WHOLE FAMILY FOR THE ENTIRE SEASON!</h2>
+                  <p class='policy-p'>Hillcrest is conveniently located at the corner of Powell and Burnside. Across Hwy 26 from the Gresham Fred Meyer. We offer 24 hour rentals, so no rush to get off the slopes and back to town before closing time. Recreational passes are available for purchase in-store.</p>
+                </div>  
+                <div class='info-body'>
+                  <div class='policy'>
+                    <p class='policy-p'><span class='policy-title'>Location </span><span class='para'>Hillcrest is conveniently located on the edge Gresham at the beginning of Highway 26. Easy pick-up and drop-off.</span></p>
+                  </div>  
+                  <div class='policy'>
+                    <p class='policy-p'><span class='policy-title'>Daily to Seasonal </span><span class='para'>Our rentals range from 24 hours to full season long. We can accomidate your family's needs, whatever they might be.</span></p>
+                  </div>
+                  <div class='policy'>
+                    <p class='policy-p'><span class='policy-title'>Demos </span><span class='para'>Hillcrest has a robust snowboard and ski demo fleet available for you to try before you buy. This can be helpful if you are trying to narrow down what you are looking for.</span></p>
+                  </div>
+                  
+                  <div class='policy'>
+                    <p class='policy-p'><span class='policy-title'>Better than the Mountain?</span><span class='para'>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay half the price.</span></p>
+                  </div>
+                </div>
+            </div>
+
             <div id='main-rental-card'>
 
                 <script>
@@ -285,18 +374,167 @@
                         }
                     }
 
+                    function adultSkiClick() {
+                        const adult = document.getElementById('adult-ski-prices');
+                        const youth = document.getElementById('youth-ski-prices');
+                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const poles = document.getElementById('poles-prices');
+                        if (adult.style.display = 'none') {
+                            adult.style.display = 'flex';
+                            youth.style.display = 'none';
+                            crosscountry.style.display = 'none';
+                            poles.style.display = 'none';
+                        } 
+                    }
+                    
+                    
+
+                    function youthSkiClick() {
+                        const adult = document.getElementById('adult-ski-prices');
+                        const youth = document.getElementById('youth-ski-prices');
+                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const poles = document.getElementById('poles-prices');
+                        if (youth.style.display = 'none') {
+                            youth.style.display = 'flex'
+                            adult.style.display = 'none'
+                            crosscountry.style.display = 'none';
+                            poles.style.display = 'none';
+                        } 
+                    }
+
+                    function crosscountryClick() {
+                        const adult = document.getElementById('adult-ski-prices');
+                        const youth = document.getElementById('youth-ski-prices');
+                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const poles = document.getElementById('poles-prices');
+                        if (crosscountry.style.display = 'none') {
+                            crosscountry.style.display = 'flex'
+                            adult.style.display = 'none'
+                            youth.style.display = 'none';
+                            poles.style.display = 'none';
+                        } 
+                    }
+
+                    function polesClick() {
+                        const adult = document.getElementById('adult-ski-prices');
+                        const youth = document.getElementById('youth-ski-prices');
+                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const poles = document.getElementById('poles-prices');
+                        if (poles.style.display = 'none') {
+                            poles.style.display = 'flex'
+                            adult.style.display = 'none'
+                            crosscountry.style.display = 'none';
+                            youth.style.display = 'none';
+                        } 
+                    }
+
+                    function adultSnowboardClick() {
+                        const adult = document.getElementById('adult-snowboard-prices');
+                        const youth = document.getElementById('youth-snowboard-prices');
+                        if (adult.style.display = 'none') {
+                            adult.style.display = 'flex'
+                            youth.style.display = 'none'
+                        } 
+                    }
+
+                    function youthSnowboardClick() {
+                        const adult = document.getElementById('adult-snowboard-prices');
+                        const youth = document.getElementById('youth-snowboard-prices');
+                        if (youth.style.display = 'none') {
+                            youth.style.display = 'flex'
+                            adult.style.display = 'none'
+                        } 
+                    }
+
+                    function snowshoeClick() {
+                        const shoe = document.getElementById('snowshoe-prices');
+                        if (shoe.style.display = 'none') {
+                            shoe.style.display = 'flex'
+                        } 
+                    }
+
+                    function kayakClick() {
+                        const kayak = document.getElementById('kayak-prices');
+                        if (kayak.style.display = 'none') {
+                            kayak.style.display = 'flex'
+                        } 
+                    }
+
+                    function paddleboardClick() {
+                        const paddleboard = document.getElementById('paddleboard-prices');
+                        const wakesurf = document.getElementById('wakesurf-prices');
+                        if (paddleboard.style.display = 'none') {
+                            paddleboard.style.display = 'flex'
+                            wakesurf.style.display = 'none'
+                        } 
+                    }
+
+                    function wakesurfClick() {
+                        const paddleboard = document.getElementById('paddleboard-prices');
+                        const wakesurf = document.getElementById('wakesurf-prices');
+                        if (wakesurf.style.display = 'none') {
+                            wakesurf.style.display = 'flex'
+                            paddleboard.style.display = 'none'
+                        } 
+                    }
+
+                    function mountaineeringClick() {
+                        const mountaineering = document.getElementById('mountaineering-prices');
+                        if (mountaineering.style.display = 'none') {
+                            mountaineering.style.display = 'flex'
+                        } 
+                    }
+
+                    function outerwearClick() {
+                        const outerwear = document.getElementById('outerwear-prices');
+                        if (outerwear.style.display = 'none') {
+                            outerwear.style.display = 'flex'
+                        } 
+                    }
+
+
+                    
                 </script>
 
                 <style>
 
                     #rental-card-front {
-                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/all-rentals.jpg'}}");
+                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/pricing-rentals.png'}}");
                         height: 310px;
                         background-size: cover;
                         background-position: center bottom;
                         max-width: 960px;
                         margin: 0 auto;
                         position: relative;
+                        transition: 1s;
+                    }
+
+                    #rental-card-front:hover::before {
+                        transform: scale(1.1);
+                        box-shadow: 0 0 15px #ffee10;
+                        transition: .5s;
+                    } 
+
+
+                    #rental-card-front:hover {
+                        box-shadow: 0 0 25px #f1a500;
+                        transition: .75s;
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (max-width: 1024px) {
+                    /*For smaller laptops: */
+                         #rental-card-front {
+                             height: 30vmin;
+                             width: 90vmin;
+                         } 
+                    }
+
+                    @media only screen and (max-width: 768px) {
+                        /* For mobile phones: */
+                        #rental-card-front {
+                            left: -55;
+                        }
                     }
 
                 </style>
@@ -319,6 +557,7 @@
                         max-width: 960px;
                         margin: 0 auto;
                         border-bottom-right-radius: 0;
+                        margin-bottom: 20px;
                     }
 
                     #rental-menu {
@@ -416,6 +655,8 @@
                     .rentals-btns p:hover {
                         background-color: #cc4749;
                         cursor: pointer;
+                        transition: .5s;
+                        box-shadow: 0 0 15px #4C86A8;
                     }
 
                     .rentals-btns-a {
@@ -512,6 +753,17 @@
                         margin-bottom: 20px;
                     }
 
+                    .rental-button-right {
+                        background-color:#f1a500;
+                    }
+
+                    .rental-button-right:hover {
+                        background-color: #4C86A8;
+                        cursor: pointer;
+                        transition: .6s;
+                        box-shadow: 0 0 15px #ffee10;
+                    }
+
                     #ski-body {
                         display: none;
                     }
@@ -540,6 +792,53 @@
                         display: none;
                     }
 
+                    #adult-ski-prices {
+                        display: none;
+                    }
+
+                    #youth-ski-prices {
+                        display: none;
+                    }
+
+                    #crosscountry-prices {
+                        display: none;
+                    }
+
+                    #poles-prices {
+                        display: none;
+                    }
+
+                    #adult-snowboard-prices {
+                        display: none;
+                    }
+
+                    #youth-snowboard-prices {
+                        display: none;
+                    }
+
+                    #snowshoe-prices {
+                        display: none;
+                    }
+
+                    #kayak-prices {
+                        display: none;
+                    }
+
+                    #wakesurf-prices {
+                        display: none;
+                    }
+
+                    #paddleboard-prices {
+                        display: none;
+                    }
+
+                    #mountaineering-prices {
+                        display: none;
+                    }
+
+                    #outerwear-prices {
+                        display: none;
+                    }
                     
                     @media only screen and (max-width: 1024px) {
                     /*For smaller laptops: */
@@ -632,18 +931,32 @@
                             </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-a'>
-                                    <p>Adult Prices</p>
-                                    <p class='youth-btn'>Youth Prices</p>
+                                    <p onclick='adultSkiClick()'>Adult Prices</p>
+                                    <p onclick='youthSkiClick()'>Youth Prices</p>
                                 </div>
                                 <div class='rentals-btns-b'>
-                                    <p>Crosscounty</br>Ski Prices</p>
+                                    <p onclick='crosscountryClick()'>Crosscounty</br>Ski Prices</p>
                                 </br>
-                                    <p>Poles &</br>Accessories</p>
+                                    <p onclick='polesClick()'>Poles &</br>Accessories</p>
                                 </div>
-                                <div class='rentals-btns-c'>
+                                <!-- <div class='rentals-btns-c'>
                                     <p>Clothing</p>
-                                </div>
+                                </div> -->
 
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='adult-ski-prices'>
+                                    <h1>Adult Ski Prices</h1>
+                                </div>
+                                <div class='rentals-price-catagory' id='youth-ski-prices'>
+                                    <h1>Youth Ski Prices</h1>
+                                </div>
+                                <div class='rentals-price-catagory' id='crosscountry-prices'>
+                                    <h1>Crosscountry Ski Prices</h1>
+                                </div>
+                                <div class='rentals-price-catagory' id='poles-prices'>
+                                    <h1>Ski Pole Prices</h1>
+                                </div>
                             </div>
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
@@ -676,11 +989,20 @@
                             </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-a'>
-                                    <p>Adult</br>Prices</p>
-                                    <p class='youth-btn'>Youth</br>Prices</p>
+                                    <p onclick='adultSnowboardClick()'>Adult</br>Prices</p>
+                                    <p onclick='youthSnowboardClick()'>Youth</br>Prices</p>
                                 </div>
-                                <div class='rentals-btns-c'>
+                                <!-- <div class='rentals-btns-c'>
                                     <p>Clothing</p>
+                                </div> -->
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='adult-snowboard-prices'>
+                                    <h1>Adult Snowboard Prices</h1>
+
+                                </div>
+                                <div class='rentals-price-catagory' id='youth-snowboard-prices'>
+                                    <h1>Youth Snowboard Prices</h1>
                                 </div>
                             </div>
                         </div>
@@ -697,14 +1019,18 @@
                                 <p>
                                     Walk along the snowy terrain this winter and take in the beautiful views with Hillscrest Ski & Sports’ snowshoe rentals. At Hillcrest, we enjoy sharing our love of the outdoors and we make it easier for you to so as well. With our snowshoe rental package, you get the snowshoes, boots, and poles. You also have the option to rent them out separately. And as with all of our rentals, you get your items for 24 hours
                                 </p>
-                            </div>
-                            <div class='rentals-btns'>
-                                <div class='rentals-btns-a'>
-                                    <p>Adult</br>Prices</p>
-                                    <p class='youth-btn'>Youth</br>Prices</p>
+                                <div class='rentals-btns-d'>
+                                    <p class='rental-button-right' onclick='snowshoeClick()'>Snowshoe Prices</p>
                                 </div>
+                            </div>
+                            <!-- <div class='rentals-btns'>
                                 <div class='rentals-btns-c'>
                                     <p>Clothing</p>
+                                </div>
+                            </div> -->
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='snowshoe-prices'>
+                                    <h1>Snowshoe Prices</h1>
                                 </div>
                             </div>
                         </div>
@@ -739,16 +1065,16 @@
                             </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-a'>
-                                    <p>
+                                    <p onClick='kayakClick()'>
                                         Kayak Pricing
                                     </p>
                                 </div>
-                                <div class='rentals-btns-d'>
-                                    <p>
-                                        Wakesurf Pricing
-                                    </p>
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='kayak-prices'>
+                                    <h1>Kayak Prices</h1>
+
                                 </div>
-                                
                             </div>
                         </div>
                         <div class='side-b-body' id='paddleboard-body'>
@@ -793,14 +1119,23 @@
                             </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-e'>
-                                    <p>
+                                    <p onclick='paddleboardClick()'>
                                         Paddle Board Pricing
                                     </p>
                                 </div>
                                 <div class='rentals-btns-d'>
-                                    <p>
+                                    <p onclick='wakesurfClick()'>
                                         Wakesurf Pricing
                                     </p>
+                                </div>
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='paddleboard-prices'>
+                                    <h1>Paddleboard Prices</h1>
+
+                                </div>
+                                <div class='rentals-price-catagory' id='wakesurf-prices'>
+                                    <h1>Wakesurf Prices</h1>
                                 </div>
                             </div>
                         </div>
@@ -837,114 +1172,46 @@
                             </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-f'>
-                                    <p>
+                                    <p onclick='mountaineeringClick()'>
                                         Mountaineering Pricing
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='mountaineering-prices'>
+                                    <h1>Mountaineering Prices</h1>
+                                </div>
+                            </div>
                         </div>
                         <div class='side-b-body' id='outerwear-body'>
                             <div class='rental-catagory-main'>
                                 <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/mountaineering-icon.png'}}">
+                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/ski-pants.png'}}">
                                     <span class='rentals-title-long'>
                                         Outerwear Rentals
                                     </span>
                                 </h1>
                             </div>
+                            <div class='rentals-body-middle'>
+                                <div class='rentals-btns-f'>
+                                    <p class='rental-button-right' onclick='outerwearClick()'>
+                                        Outerwear Pricing
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class='rentals-body-bottom'>
+                            </div> -->
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='outerwear-prices'>
+                                    <h1>Outerwear Prices</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-
-            <style>
-                .general-info {
-                    padding: 10px;
-                    background-color: rgba(228,228,228,.5);
-                    z-index: 2;
-                    margin: 0 auto;
-                }
-
-                .info-body {
-                    display: grid;
-                    grid-gap: 0px;
-                    grid-template-columns: auto auto;
-                }
-
-                .policy {
-                    width: 90%;
-                    margin: 0 auto;
-                    padding: 0 4px;
-                    border-radius: 50%;
-                }
-
-                .policy-title {
-                    font-size: 22px;
-                    font-weight: 600;
-                    background-color: #a4e542;
-                    padding: 2px 15px;
-                    border-radius: 10px;
-                }
-                
-                .policy p { 
-                    background-color: white;
-                    padding: 5px;
-                }
-
-                .policy-p {
-                    border-radius: 10px;
-                }
-
-                .para {
-                    padding-left: 8px;
-                }
-
-                @media only screen and (min-width: 1044px) {
-                /* For laptops: */
-                .general-info {
-                    max-width: 960px; 
-                }   
-            }
-
-                @media only screen and (max-width: 768px) {
-                /* For mobile phones: */
-                .info-body {
-                    grid-template-columns: auto;
-                }
-
-                
-            }
-            </style>          
-            <div class='general-info'>
-                <div class='info-top'>
-                  <h2>OUTFIT YOURSELF FOR THE DAY OR THE WHOLE FAMILY FOR THE ENTIRE SEASON!</h2>
-                  <p class='policy-p'>Hillcrest is conveniently located at the corner of Powell and Burnside at the beginning of Hwy 26. We offer 24 hour rentals. So no rush to get off the slopes and back to town before closing time. Recreational passes available for purchase in-store.</p>
-                </div>  
-                <div class='info-body'>
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Daily Rentals </span><span class='para'>All daily rentals are for a full 24 hours! Easy pick up and drop off. We can outfit you or the whole family for as long as you need equipment.</span></p>
-                  </div>
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Multi-Day </span><span class='para'>With our Multi-Day rental program you can save time and money. Multiple days are pro-rated depending on how long you need the gear.</span></p>
-                  </div>
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Season Rentals </span><span class='para'>You can rent gear for the entire season at a fraction of the price of a new ski/snowboard setup - perfect for growing kids!</span></p>
-                  </div>
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Demos </span><span class='para'>Try before you buy. Hillcrest has a robust snowboard and ski demo fleet with all different types of shapes and profiles.</span></p>
-                  </div>
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Location </span><span class='para'>Hillcrest is conveniently located on the edge Gresham at the beginning of Highway 26. Easy pick-up and drop-off.</span></p>
-                  </div>  
-                  <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Cheaper </span><span class='para'>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay half the price.</span></p>
-                  </div>
-                </div>
             </div>
-
         </div>
 
         {{#if page.feed}}
