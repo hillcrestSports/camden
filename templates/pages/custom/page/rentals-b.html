@@ -115,7 +115,7 @@
             <div class='general-info'>
                 <div class='info-top'>
                   <h2>OUTFIT YOURSELF FOR THE DAY OR THE WHOLE FAMILY FOR THE ENTIRE SEASON!</h2>
-                  <p class='policy-p'>Hillcrest is conveniently located at the corner of Powell and Burnside. Across Hwy 26 from the Gresham Fred Meyer. We offer 24 hour rentals, so no rush to get off the slopes and back to town before closing time. Recreational passes are available for purchase in-store.</p>
+                  <!-- <p class='policy-p'>Hillcrest is conveniently located at the corner of Powell and Burnside. Across Hwy 26 from the Gresham Fred Meyer. We offer 24 hour rentals, so no rush to get off the slopes and back to town before closing time. Recreational passes are available for purchase in-store.</p> -->
                 </div>  
                 <div class='info-body'>
                   <div class='policy'>
@@ -377,7 +377,7 @@
                     function adultSkiClick() {
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
-                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const crosscountry = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
                         if (adult.style.display = 'none') {
                             adult.style.display = 'flex';
@@ -392,7 +392,7 @@
                     function youthSkiClick() {
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
-                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const crosscountry = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
                         if (youth.style.display = 'none') {
                             youth.style.display = 'flex'
@@ -405,10 +405,10 @@
                     function crosscountryClick() {
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
-                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const crosscountryY = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
-                        if (crosscountry.style.display = 'none') {
-                            crosscountry.style.display = 'flex'
+                        if (crosscountryY.style.display = 'none') {
+                            crosscountryY.style.display = 'flex'
                             adult.style.display = 'none'
                             youth.style.display = 'none';
                             poles.style.display = 'none';
@@ -418,12 +418,12 @@
                     function polesClick() {
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
-                        const crosscountry = document.getElementById('crosscountry-prices');
+                        const crosscountryY = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
                         if (poles.style.display = 'none') {
                             poles.style.display = 'flex'
                             adult.style.display = 'none'
-                            crosscountry.style.display = 'none';
+                            crosscountryY.style.display = 'none';
                             youth.style.display = 'none';
                         } 
                     }
@@ -753,6 +753,26 @@
                         margin-bottom: 20px;
                     }
 
+                    .rentals-btns-g {
+                        display: inline-block;
+                        width: 60%;
+                        padding: 20px, 0;
+                        padding-left: 10px; 
+                        margin: 0 auto;
+                    }
+
+                    
+                    .rentals-btns-g p {
+                        border: 2px double #4C86A8;
+                        width: 180px;
+                        height: 110px;
+                        border-radius: 20px;
+                        font-size: 33px;
+                        margin-right: 20%;
+                        padding: 5px;
+                    }
+
+
                     .rental-button-right {
                         background-color:#f1a500;
                     }
@@ -762,6 +782,14 @@
                         cursor: pointer;
                         transition: .6s;
                         box-shadow: 0 0 15px #ffee10;
+                    }
+
+                    .red {
+                        color: #cc4749;
+                    }
+
+                    .rentals-price-catagory ul{
+                        list-style-type: none;
                     }
 
                     #ski-body {
@@ -800,7 +828,11 @@
                         display: none;
                     }
 
-                    #crosscountry-prices {
+                    #crosscountry-youth-prices {
+                        display: none;
+                    }
+
+                    #crosscountry-adult-prices {
                         display: none;
                     }
 
@@ -946,16 +978,210 @@
                             </div>
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='adult-ski-prices'>
-                                    <h1>Adult Ski Prices</h1>
+                                    <h2>Adult</br>Ski</br>Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                        <li>6 Week</li>
+                                        <li>8 Week</li>
+                                        <li>Full Season</li>
+                                    </ul>
+                                    <ul>Package
+                                        <li>$42</li>
+                                        <li>$62</li>
+                                        <li>$78</li>
+                                        <li>$92</li>
+                                        <li>$108</li>
+                                        <li>$135</li>
+                                        <li>$169</li>
+                                        <li>$199</li>
+                                        <li>$245</li>
+                                    </ul>
+                                    <ul>Skis Only
+                                        <li>$30</li>
+                                        <li>$45</li>
+                                        <li>$55</li>
+                                        <li>$65</li>
+                                        <li>$85</li>
+                                        <li>$99</li>
+                                        <li>$125</li>
+                                        <li class='red'>$199</li>
+                                        <li>$155</li>
+                                    </ul>
+                                    <ul>Boots with Inspection
+                                        <li>$37</li>
+                                        <li>$42</li>
+                                        <li>$47</li>
+                                        <li>$63</li>
+                                        <li>$72</li>
+                                        <li>$91</li>
+                                        <li>$105</li>
+                                        <li>$117</li>
+                                        <li>$129</li>
+                                    </ul>
                                 </div>
                                 <div class='rentals-price-catagory' id='youth-ski-prices'>
-                                    <h1>Youth Ski Prices</h1>
+                                    <h2>Youth</br>Ski</br>Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                        <li>6 Week</li>
+                                        <li>8 Week</li>
+                                        <li>Full Season</li>
+                                    </ul>
+                                    <ul>Package
+                                        <li>$30</li>
+                                        <li>$40</li>
+                                        <li>$52</li>
+                                        <li>$67</li>
+                                        <li>$75</li>
+                                        <li>$95</li>
+                                        <li>$115</li>
+                                        <li>$145</li>
+                                        <li>$189</li>
+                                    </ul>
+                                    <ul>Skis Only
+                                        <li>$18</li>
+                                        <li>$21</li>
+                                        <li>$26</li>
+                                        <li>$32</li>
+                                        <li>$39</li>
+                                        <li>$59</li>
+                                        <li>$79</li>
+                                        <li>$99</li>
+                                        <li>$135</li>
+                                    </ul>
+                                    <ul>Boots with Inspection
+                                        <li>$25</li>
+                                        <li>$28</li>
+                                        <li>$33</li>
+                                        <li>$41</li>
+                                        <li>$47</li>
+                                        <li>$57</li>
+                                        <li>$67</li>
+                                        <li>$77</li>
+                                        <li>$98</li>
+                                    </ul>
                                 </div>
-                                <div class='rentals-price-catagory' id='crosscountry-prices'>
-                                    <h1>Crosscountry Ski Prices</h1>
+                                <div class='rentals-price-catagory' id='crosscountry-youth-prices'>
+                                    <h2>Youth</br>Crosscounty</br>Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                    </ul>
+                                    <ul>Package
+                                        <li>$20</li>
+                                        <li>$27</li>
+                                        <li>$36</li>
+                                        <li>$49</li>
+                                        <li>$55</li>
+                                        <li>$85</li>
+                                    </ul>
+                                    <ul>Skis Only
+                                        <li>$12</li>
+                                        <li>$14</li>
+                                        <li>$18</li>
+                                        <li>$25</li>
+                                        <li>$34</li>
+                                        <li>$45</li>
+                                    </ul>
+                                    <ul>Boots with Inspection
+                                        <li>$12</li>
+                                        <li>$18</li>
+                                        <li>$25</li>
+                                        <li>$35</li>
+                                        <li>$45</li>
+                                        <li>$60</li>
+                                    </ul>
+                                </div>
+                                <div class='rentals-price-catagory' id='crosscountry-adult-prices'>
+                                    <h2>Crosscountry Adult Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                    </ul>
+                                    <ul>Package
+                                        <li>$20</li>
+                                        <li>$27</li>
+                                        <li>$36</li>
+                                        <li>$49</li>
+                                        <li>$55</li>
+                                        <li>$85</li>
+                                    </ul>
+                                    <ul>Skis Only
+                                        <li>$12</li>
+                                        <li>$14</li>
+                                        <li>$18</li>
+                                        <li>$25</li>
+                                        <li>$34</li>
+                                        <li>$45</li>
+                                    </ul>
+                                    <ul>Boots with Inspection
+                                        <li>$12</li>
+                                        <li>$18</li>
+                                        <li>$25</li>
+                                        <li>$35</li>
+                                        <li>$45</li>
+                                        <li>$60</li>
+                                    </ul>
                                 </div>
                                 <div class='rentals-price-catagory' id='poles-prices'>
-                                    <h1>Ski Pole Prices</h1>
+                                    <h2>Ski</br>Pole</br>Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                    </ul>
+                                    <ul>Poles(2)
+                                        <li>$7</li>
+                                        <li>$9</li>
+                                        <li>$12</li>
+                                        <li>$19</li>
+                                        <li>$20</li>
+                                        <li>$25</li>
+                                    </ul>
+                                    <h2>Helmet</br>Prices</h2>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                    </ul>
+                                    <ul>Helmet
+                                        <li>$8</li>
+                                        <li>$12</li>
+                                        <li>$16</li>
+                                        <li>$29</li>
+                                        <li>$39</li>
+                                        <li>$49</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1193,7 +1419,7 @@
                                 </h1>
                             </div>
                             <div class='rentals-body-middle'>
-                                <div class='rentals-btns-f'>
+                                <div class='rentals-btns-g'>
                                     <p class='rental-button-right' onclick='outerwearClick()'>
                                         Outerwear Pricing
                                     </p>
@@ -1204,6 +1430,7 @@
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='outerwear-prices'>
                                     <h1>Outerwear Prices</h1>
+
                                 </div>
                             </div>
                         </div>
