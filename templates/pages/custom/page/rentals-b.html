@@ -42,6 +42,11 @@
                 margin-bottom: 20px;
                 z-index: 1;
             }
+
+            .page-content {
+                width: 100%;
+            }
+
         </style>
 
         <div class='page-content'>
@@ -350,12 +355,14 @@
                         const crosscountry = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
                         const helmet = document.getElementById('helmet-prices');
+                        // const bottom = document.getElementByClassName('rental-body-bottom');
                         if (youth.style.display = 'none') {
                             youth.style.display = 'flex'
                             adult.style.display = 'none'
                             crosscountry.style.display = 'none';
                             poles.style.display = 'none';
                             helmet.style.display = 'none';
+                            // bottom.style.display = 'none';
                         } 
                     }
 
@@ -520,7 +527,7 @@
                 <style>
 
                     #rental-card-back {
-                        background-color: #cc4749;
+                        background-color: white;
                         min-height: 360px;
                         background-size: cover;
                         left: 0;
@@ -538,6 +545,7 @@
 
                     #rental-menu {
                         background-color: #4C86A8;
+                        color: white;
                         width: 240px;
                         padding: 10px;
                         padding: 0px;
@@ -565,53 +573,23 @@
 
                     .rentals-body {
                         text-align: center;
-                    }
-
-                    .rental-icon {
-                        height: 95px;
-                        position: absolute;
-                        left: 265px;
-                    }
-
-                    .rental-icon-b {
-                       height: 110px;
-                    }
-
-                    .rental-icon-bb {
-                       height: 110px;
-                       width: 80px;
-                    }
-
-                    .rental-icon-c {
-                        left: 250px;
-                        height: 100px;
-                    }
-
-                    .rental-icon-d {
-                        height: 110px;
-                        position: absolute;
-                        right: 20px;
-                    }
-
-                    .rentals-body-top {
-                        color: #4C86A8;
-                        font-size: 50px;
-                        padding-top: 8px;
+                        background: white;
+                        width: 100%;
                     }
 
                     .rentals-title {
                         margin: 0 80px;
-
-                    }
-
-                    .rentals-title-long {
-                        margin-left: 70px;
+                        color: #4C86A8;
+                        font-size: 80px;
+                        padding-top: 8px;
                     }
 
                     .rentals-body-middle {
-                        margin-top: 50px;
-                        padding: 6px;
+                        margin-top: 10px;
+                        padding: 12px;
                         font-size: 16px;
+                        width: 85%;
+                        background-color: white;
                     }
 
                     .rentals-body-bottom {
@@ -619,17 +597,22 @@
                         background-color: antiquewhite;
                         padding: 12px;
                         font-size: 14px;
+                        width: 85%;
                     }
 
                     .rentals-btns {
-                        position: absolute;
-                        display: inline-block;
-                        left: 0;
-                        top: 360px;
-                        width: 240px;
+                        position: relative;
+                        display: inline-flex;
+                        left: -240px;
+                        top: 21px;
+                        width: 100%;
                         background-color: #f1a500;
-                        padding-top: 20px;
-                        padding-bottom: 15px;
+                        padding: 15px;
+                        height: 95px;
+                        border-radius: 15px;
+                        border-top: none;
+                        align-content: center;
+
                     }
 
                     .rentals-btns p:hover {
@@ -639,26 +622,19 @@
                         box-shadow: 0 0 15px #4C86A8;
                     }
 
-                    .rentals-btns-a {
-                        width: 100%;
-                        padding: 20px, 0;
-                        
-                    }
+                    /* .rBtn {
+                        margin: 20px,                 
+                    } */
 
                     
                     .rentals-btns-a p {
                         border: 2px double #4C86A8;
                         width: 105px;
-                        height: 70px;
                         border-radius: 20px;
                         font-size: 33px;
-                        margin: 0 auto;
+                        margin: 0 1.2vmin;
                         padding: 5px;
                         margin-bottom: 20px;
-                    }
-
-                    .rentals-btns-b {
-                        width: 80%;
                     }
 
                     .rentals-btns-b p {
@@ -667,13 +643,8 @@
                         border-radius: 20px;
                         font-size: 25px;
                         width: 150px;
-                        margin: 0 auto;
+                        margin: 0 1.2vmin;
                     }
-
-                    .rentals-btns-c {
-                        width: 100%;
-                    }
-
                     
                     .rentals-btns-c p {
                         border: 2px double #4C86A8;
@@ -681,13 +652,9 @@
                         height: 60px;
                         border-radius: 20px;
                         font-size: 33px;
-                        margin: 0 auto;
+                        margin: 0 1.2vmin;
                         margin-top: 10px;
                         padding: 5px;
-                    }
-
-                    .rentals-btns-d {
-                        width: 100%;
                     }
 
                     .rentals-btns-d p {
@@ -696,11 +663,7 @@
                         border-radius: 20px;
                         font-size: 33px;
                         width: 170px;
-                        margin: 0 auto;
-                    }
-
-                    .rentals-btns-e {
-                        width: 100%;
+                        margin: 0 1.2vmin;
                     }
 
                     .rentals-btns-e p {
@@ -709,12 +672,8 @@
                         border-radius: 20px;
                         font-size: 33px;
                         width: 200px;
-                        margin: 0 auto;
+                        margin: 0 1.2vmin;
                         margin-bottom: 20px;
-                    }
-
-                    .rentals-btns-f {
-                        width: 95%;
                     }
 
                     .rentals-btns-f p {
@@ -723,18 +682,10 @@
                         border-radius: 20px;
                         font-size: 29px;
                         width: 100%;
-                        margin: 0 auto;
+                        margin: 0 1.2vmin;
                         margin-bottom: 20px;
                     }
-
-                    .rentals-btns-g {
-                        width: 60%;
-                        padding: 20px, 0;
-                        padding-left: 10px; 
-                        margin: 0 auto;
-                    }
-
-                    
+  
                     .rentals-btns-g p {
                         border: 2px double #4C86A8;
                         width: 180px;
@@ -744,14 +695,6 @@
                         margin-right: 20%;
                         padding: 5px;
                     }
-
-                    
-                    .rentals-btns-xx {
-                        width: 75%;
-                        padding-left: 10px; 
-                        margin: 0 auto;
-                    }
-
                     
                     .rentals-btns-xx p {
                         border: 2px double #4C86A8;
@@ -764,15 +707,7 @@
                         padding-bottom: 0;
                         margin-bottom: 0;
                     }
-
-                    .rentals-btns-demo {
-                        width: 60%;
-                        padding: 20px, 0;
-                        padding-left: 10px; 
-                        margin: 0 auto;
-                    }
-
-                    
+                
                     .rentals-btns-demo p {
                         border: 2px double #4C86A8;
                         width: 120px;
@@ -784,18 +719,13 @@
                         padding: 5px;
                     }
 
-                    .rentals-btns-helmets {
-                        width: 75%;
-                        margin: 0 auto;
-                    }
-
                     .rentals-btns-helmets p {
                         border: 2px double #4C86A8;
                         width: 160px;
                         height: 64px;
                         border-radius: 20px;
                         font-size: 33px;
-                        margin: 20px auto;
+                        margin: 0 1.2vmin;
                         padding: 5px;
                         margin-bottom: 0px;
                         
@@ -928,7 +858,7 @@
 
                         #rental-card-back {
                             height: 620px;
-                            grid-template-columns: auto;
+                            grid-template-columns: 1.2vmin;
                         }
                     }
 
@@ -963,18 +893,33 @@
                     <div class='rentals-body'>
                         <div class='side-b-body' id='ski-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
-                                    <span class='rentals-title'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
                                         Ski Rentals
-                                    </span>
-                                    <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/skis-icon.png'}}">
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
                                     Enjoy the slopes with Hillcrest Ski & Sports’ ski rentals! We offer a variety of ski equipment rentals including men’s skis and boots, women’s skis and boots, and kid’s skis and boots. Every ski package also comes with bindings and poles. New to skiing? We have experienced technician to properly fit you for your equipment-- depending on your skill level, and they’ll also provide a demonstration for you. All rentals are on a first-come, first-serve basis. Once you rent your ski equipment, you’ll have it for 24 hours, however, longer rentals are available.
                                 </p>
+                            </div>
+                            <div class='rentals-btns'>
+                                <div class='rentals-btns-a rBtn'>
+                                    <p onclick='adultSkiClick()'>Adult</p>
+                                </div>
+                                <div class='rentals-btns-a rBtn'>
+                                    <p onclick='youthSkiClick()'>Youth</p>
+                                </div>
+                                <div class='rentals-btns-e rBtn'>
+                                    <p onclick='crosscountryClick()'>Crosscounty</p>
+                                </div>
+                                <div class='rentals-btns-helmets rBtn'>
+                                    <p onclick='polesClick()'>Ski Poles</p>
+                                </div>
+                                <div class='rentals-btns-helmets rBtn'>
+                                    <p onclick='helmetsClick()'>Helmets</p>
+                                </div>
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
@@ -1004,20 +949,7 @@
                                 </p>
                                 <p>*Youth pricing is for skis 140cm or shorter, and for size 6 boot or under.</p>
                             </div>
-                            <div class='rentals-btns'>
-                                <div class='rentals-btns-a'>
-                                    <p onclick='adultSkiClick()'>Adult</p>
-                                    <p onclick='youthSkiClick()'>Youth</p>
-                                </div>
-                                <div class='rentals-btns-e'>
-                                    <p onclick='crosscountryClick()'>Crosscounty</p>
-                                </div>
-                                <div class='rentals-btns-helmets'>
-                                    <p onclick='polesClick()'>Ski Poles</p>
-                                    <p onclick='helmetsClick()'>Helmets</p>
-                                </div>
-                                
-                            </div>
+                         
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='adult-ski-prices'>
                                     <h2>Adult</br>Ski</br>Prices</h2>
