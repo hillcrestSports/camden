@@ -1,6 +1,6 @@
 {{#partial "page"}}
 
-<div class="container">
+<div>
     <main class="page">
         {{#unless theme_settings.hide_page_heading }}
         <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
@@ -574,7 +574,7 @@
                     .rentals-body {
                         text-align: center;
                         background: rgba(242, 242, 242, 1);
-                        width: 100%;
+                        width: 86%;
                     }
 
                     .rentals-title {
@@ -588,12 +588,14 @@
                         margin-top: 10px;
                         padding: 12px;
                         font-size: 16px;
-                        width: 85%;
+                        width: 84%;
                         background-color: white;
                     }
 
                     .rentals-body-bottom {
-                        top: 400px;
+                        position: relative;
+                        left: -150px;
+                        top: 30px;
                         background-color: white;
                         padding: 12px;
                         font-size: calc(12px + 0.8vmin);
@@ -1151,41 +1153,24 @@
                         </div>
                         <div class='side-b-body' id='snowboard-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/snowboard-icon.png'}}">
-                                    <span class='rentals-title-long'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
                                         Snowboard Rentals
-                                    </span>
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
                                     Hillcrest Ski & Sports has everything you need for your next snowboarding adventure in the Portland area! Our snowboard packages include men’s snowboards, women’s snowboards, and kid’s snowboards complete with boots and bindings. Have your own snowboard and just need boots? We also rent out single equipment including men’s snowboard boots, women’s snowboard boots, and kid’s snowboard boots. If you’re new to the sport, we’ll help make sure you’re properly fitted to your boots and snowboard. We also offer demonstration snowboard packages. We rent out our equipment on a first-come-first-serve basis and once you receive your snowboard equipment, you’ll have it for a full 24 hours, however, longer rentals are available.
                                 </p>
                             </div>
-                            <div class='rentals-body-bottom'>
-                                <h2>
-                                    Snowboard Package Rentals
-                                </h2>
-                                <p>
-                                    Different boards are designed for different skill levels. And we at Hillcrest cater to them all. We provide snowboards for beginners, intermediate, advanced, and junior boarders. Keep in mind if you’re only doing a snowboard rental, you’ll want to bring your boots in at the time of pick-up so they can be properly fitted. If you’re getting the snowboard rental package, the fitting is already included.
-                                </p>
-                                <h2>
-                                    Snow Gear For Rent
-                                </h2>
-                                <p>
-                                    Be out on the slopes for as long as you want with our snowboard boot rental. We provide high-quality waterproof boots in several different brands and models to cater to everyone’s shape, size, and skill level. We want you to be comfortable during your snowboarding adventure, which is why we not only fit the boots to you, but to your snowboard as well.
-                                </p>
-                                <p>*Youth pricing is for snowboards 140cm or shorter, and for size 6 boot or under.</p>
-                            </div>
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-a'>
                                     <p onclick='adultSnowboardClick()'>Adult</p>
+                                </div>
+                                <div class='rentals-btns-a'>
                                     <p onclick='youthSnowboardClick()'>Youth</p>
                                 </div>
-                                <!-- <div class='rentals-btns-c'>
-                                    <p>Clothing</p>
-                                </div> -->
                             </div>
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='adult-snowboard-prices'>
@@ -1287,15 +1272,29 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class='rentals-body-bottom'>
+                                <h2>
+                                    Snowboard Package Rentals
+                                </h2>
+                                <p>
+                                    Different boards are designed for different skill levels. And we at Hillcrest cater to them all. We provide snowboards for beginners, intermediate, advanced, and junior boarders. Keep in mind if you’re only doing a snowboard rental, you’ll want to bring your boots in at the time of pick-up so they can be properly fitted. If you’re getting the snowboard rental package, the fitting is already included.
+                                </p>
+                                <h2>
+                                    Snow Gear For Rent
+                                </h2>
+                                <p>
+                                    Be out on the slopes for as long as you want with our snowboard boot rental. We provide high-quality waterproof boots in several different brands and models to cater to everyone’s shape, size, and skill level. We want you to be comfortable during your snowboarding adventure, which is why we not only fit the boots to you, but to your snowboard as well.
+                                </p>
+                                <p>*Youth pricing is for snowboards 140cm or shorter, and for size 6 boot or under.</p>
+                            </div>               
                         </div>
                         <div class='side-b-body' id='snowshoe-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-bb' src="{{cdn 'assets/img/hillcrest/icons/snowshoes-icon.png'}}">
-                                    <span class='rentals-title-long'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
                                         Snowshoe Rentals
-                                    </span>
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
@@ -1318,18 +1317,30 @@
                         </div>
                         <div class='side-b-body' id='kayak-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-b' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
-                                    <span class='rentals-title'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
                                         Kayak Rentals
-                                    </span>
-                                    <img class='rental-icon-d' src="{{cdn 'assets/img/hillcrest/icons/kayak-icon.png'}}">
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
                                     Kayaking is a watersport that allows you to enjoy nature from a different perspective. It can be a calm and relaxing experience set on a mellow lake or a fun and exciting adventure on the rapids of your local river. You decide. The possibilities for kayaking are endless. If you’re thinking about kayaking, Hillcrest Sports offers daily and seasonal kayak rentals. We carry a full range of kayaks including single kayaks and tandem kayaks-- so you can explore alone or with a friend! Our kayak rentals start at the low price of $ 40 and come with everything you need to have a safe kayaking experience including your paddles and your personal flotation device (PFD). We also offer recreational passes in-store.
                                 </p>
+                            </div>
+                           
+                            <div class='rentals-btns'>
+                                <div class='rentals-btns-a'>
+                                    <p onClick='kayakClick()'>
+                                        Kayak
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='kayak-prices'>
+                                    <h1>Kayak Prices</h1>
+
+                                </div>
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
@@ -1345,33 +1356,36 @@
                                     If you’re thinking about renting a kayak, you’ll want to consider how you’re going to transport it. There are a variety of ways to safely transport a kayak. Kayaks can be tied down to your vehicle with cam straps and water-resistant rope. You can also invest in a roof rack or smaller trailer to making transporting your kayak effortless.
                                 </p>
                             </div>
-                            <div class='rentals-btns'>
-                                <div class='rentals-btns-a'>
-                                    <p onClick='kayakClick()'>
-                                        Kayak
-                                    </p>
-                                </div>
-                            </div>
-                            <div class='rentals-prices'>
-                                <div class='rentals-price-catagory' id='kayak-prices'>
-                                    <h1>Kayak Prices</h1>
-
-                                </div>
-                            </div>
                         </div>
                         <div class='side-b-body' id='paddleboard-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/paddleboard-icon.png'}}">
-                                    <span class='rentals-title-long'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
                                         Paddleboard Rentals
-                                    </span>
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
                                     Stand up paddle boarding has become quite popular recently in the world of watersports. Stand up paddle boarding (SUP) allows you explore the water without having to swim in it. It’s quite like surfing only you stand still and move yourself around using a paddle.
                                 </p>
+                            </div>
+                          
+                            <div class='rentals-btns'>
+                                <div class='rentals-btns-e'>
+                                    <p onclick='paddleboardClick()'>
+                                        Paddle Board
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='paddleboard-prices'>
+                                    <h1>Paddleboard Prices</h1>
+
+                                </div>
+                                <div class='rentals-price-catagory' id='wakesurf-prices'>
+                                    <h1>Wakesurf Prices</h1>
+                                </div>
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
@@ -1399,10 +1413,25 @@
                                     Once you’re ready to give stand up paddle boarding a try, contact Hillcrest Sports for your paddle board rental. We’ll teach you the basics and then have you on your way.
                                 </p>
                             </div>
+                        </div>
+                        <div class='side-b-body' id='wake-sports-body'>
+                            <div class='rental-catagory-main'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title'>
+                                        Wake Sports Prices
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class='rentals-body-middle'>
+                                <p>
+                                    Wakeboards and Wakesurf Boards, while previously belived to be one singular type of object. It had been revieled by Ryan that they are in fact two seperate things. One is a different shape than the onther, see. 
+                                </p>
+                            </div>
+                            
                             <div class='rentals-btns'>
                                 <div class='rentals-btns-e'>
-                                    <p onclick='paddleboardClick()'>
-                                        Paddle Board
+                                    <p onclick='wakeboardClick()'>
+                                        Wakeboard
                                     </p>
                                 </div>
                                 <div class='rentals-btns-c'>
@@ -1419,21 +1448,6 @@
                                 <div class='rentals-price-catagory' id='wakesurf-prices'>
                                     <h1>Wakesurf Prices</h1>
                                 </div>
-                            </div>
-                        </div>
-                        <div class='side-b-body' id='wake-sports-body'>
-                            <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon' src="{{cdn 'assets/img/hillcrest/icons/paddleboard-icon.png'}}">
-                                    <span class='rentals-title-long'>
-                                        Wake Sports Prices
-                                    </span>
-                                </h1>
-                            </div>
-                            <div class='rentals-body-middle'>
-                                <p>
-                                    Wakeboards and Wakesurf Boards, while previously belived to be one singular type of object. It had been revieled by Ryan that they are in fact two seperate things. One is a different shape than the onther, see. 
-                                </p>
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
@@ -1461,41 +1475,31 @@
                                     Once you’re ready to give wakeboarding or wakesurfing a try, contact Hillcrest Sports for your paddle board rental. We’ll teach you the basics and then have you on your way.
                                 </p>
                             </div>
-                            <div class='rentals-btns'>
-                                <div class='rentals-btns-e'>
-                                    <p onclick='wakeboardClick()'>
-                                        Wakeboard
-                                    </p>
-                                </div>
-                                <div class='rentals-btns-c'>
-                                    <p onclick='wakesurfClick()'>
-                                        Wakesurf
-                                    </p>
-                                </div>
-                            </div>
-                            <div class='rentals-prices'>
-                                <div class='rentals-price-catagory' id='paddleboard-prices'>
-                                    <h1>Paddleboard Prices</h1>
-
-                                </div>
-                                <div class='rentals-price-catagory' id='wakesurf-prices'>
-                                    <h1>Wakesurf Prices</h1>
-                                </div>
-                            </div>
                         </div>
                         <div class='side-b-body' id='mountaineering-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/mountaineering-icon.png'}}">
-                                    <span class='rentals-title-long'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title-long'>
                                         Mountaineering Rentals
-                                    </span>
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <p>
                                     No matter how much experience you have, you will want to bring mountaineering gear to your trip. Boots: Not only do you want boots that fit comfortably, but you also want a pair with good traction that will keep you from slipping on the ice. You’ll need the boot to be tougher, more supportive and have a stiffer sole to accommodate crampons. We have a brand new fleet of both men’s and women’s La Sportiva Trango Tower Boots. The Trango Tower is the perfect 3-season alpine boot for tackling any of our local Cascade giants such as Mt Hood or Mt Adams.
                                 </p>
+                            </div>
+                            <div class='rentals-btns'>
+                                <div class='rentals-btns-f'>
+                                    <p onclick='mountaineeringClick()'>
+                                        Mountaineering
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='rentals-prices'>
+                                <div class='rentals-price-catagory' id='mountaineering-prices'>
+                                    <h1>Mountaineering Prices</h1>
+                                </div>
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
@@ -1514,27 +1518,14 @@
                                     Protect yourself against loose, falling rocks and ice with a helmet. All Mountaineering helmets are certified for overhead protection unlike most ski and snowboard helmets which are certified for side-protection. We offer the CAMP Titan helmets. Though you can buy mountaineering equipment, you can save some money when you rent gear instead. Hillcrest has all the mountaineering equipment you need that you can rent for 48 hours. To reserve the equipment, stop by our store!
                                 </p>
                             </div>
-                            <div class='rentals-btns'>
-                                <div class='rentals-btns-f'>
-                                    <p onclick='mountaineeringClick()'>
-                                        Mountaineering
-                                    </p>
-                                </div>
-                            </div>
-                            <div class='rentals-prices'>
-                                <div class='rentals-price-catagory' id='mountaineering-prices'>
-                                    <h1>Mountaineering Prices</h1>
-                                </div>
-                            </div>
                         </div>
                         <div class='side-b-body' id='outerwear-body'>
                             <div class='rental-catagory-main'>
-                                <h1 class='rentals-body-top'>
-                                    <img class='rental-icon rental-icon-c' src="{{cdn 'assets/img/hillcrest/icons/ski-pants.png'}}">
-                                    <span class='rentals-title-long'>
+                                <div class='rentals-body-top'>
+                                    <h1 class='rentals-title-long'>
                                         Outerwear Rentals
-                                    </span>
-                                </h1>
+                                    </h1>
+                                </div>
                             </div>
                             <div class='rentals-body-middle'>
                                 <div class='rentals-btns-d'>

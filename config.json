@@ -1,5 +1,5 @@
 {
-  "name": "Camden (3) (1) (1) (1) (7) (1) (1)",
+  "name": "Camden (3) (1) (1) (1) (7) (1) (1) (1)",
   "version": "1.5.0",
   "meta": {
     "price": 23500,
@@ -762,7 +762,7 @@
         "pace-progress-backgroundColor": "#999999",
         "spinner-borderColor-dark": "#999999",
         "spinner-borderColor-light": "#ffffff",
-        "hide_content_navigation": true,
+        "hide_content_navigation": false,
         "optimizedCheckout-header-backgroundColor": "#4C86A8",
         "optimizedCheckout-show-backgroundImage": false,
         "optimizedCheckout-backgroundImage": "",
