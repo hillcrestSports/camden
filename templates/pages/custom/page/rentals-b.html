@@ -452,12 +452,21 @@
                         } 
                     }
 
+                    function wakeboardClick() {
+                        const wakeboard = document.getElementById('wakeboard-prices');
+                        const wakesurf = document.getElementById('wakesurf-prices');
+                        if (wakeboard.style.display = 'none') {
+                            wakeboard.style.display = 'flex'
+                            wakesurf.style.display = 'none'
+                        } 
+                    }
+
                     function wakesurfClick() {
-                        const paddleboard = document.getElementById('paddleboard-prices');
+                        const wakeboard = document.getElementById('wakeboard-prices');
                         const wakesurf = document.getElementById('wakesurf-prices');
                         if (wakesurf.style.display = 'none') {
                             wakesurf.style.display = 'flex'
-                            paddleboard.style.display = 'none'
+                            wakeboard.style.display = 'none'
                         } 
                     }
 
@@ -578,21 +587,30 @@
                     }
 
                     .rentals-title {
-                        margin: 0 80px;
                         color: #4C86A8;
-                        font-size: 80px;
+                        font-size: 70px;
                         padding-top: 8px;
+                        text-align: center;
                     }
 
                     .rentals-body-middle {
                         margin-top: 10px;
                         padding: 12px;
                         font-size: 16px;
-                        width: 84%;
+                        width: 110%;
                         background-color: white;
                     }
 
-                    .rentals-body-bottom {
+                    .rentals-body-middle-ski {
+                        margin-top: 10px;
+                        padding: 12px;
+                        font-size: 16px;
+                        width: 84%;
+                        background-color: white;
+                        min-height: 200px;  
+                    }
+
+                    .rentals-body-bottom-ski {
                         position: relative;
                         left: -150px;
                         top: 30px;
@@ -602,7 +620,27 @@
                         width: 85%;
                     }
 
-                    .rentals-btns {
+                    .rentals-body-bottom {
+                        position: relative;
+                        left: -150px;
+                        top: 30px;
+                        background-color: white;
+                        padding: 12px;
+                        font-size: calc(12px + 0.8vmin);
+                        width: 135%;
+                    }
+
+                    .rentals-body-bottom-ski {
+                        position: relative;
+                        left: -150px;
+                        top: 30px;
+                        background-color: white;
+                        padding: 12px;
+                        font-size: calc(12px + 0.8vmin);
+                        width: 100%;
+                    }
+
+                    .rentals-btns-ski {
                         position: relative;
                         display: inline-flex;
                         left: -240px;
@@ -614,7 +652,19 @@
                         border-radius: 15px;
                         border-top: none;
                         align-content: center;
+                    }
 
+                    .rentals-btns {
+                        position: relative;
+                        display: inline-flex;
+                        top: 21px;
+                        width: auto;
+                        background-color: white;
+                        padding: 15px;
+                        height: 95px;
+                        border-radius: 15px;
+                        border-top: none;
+                        align-content: center;
                     }
 
                     .rentals-btns p:hover {
@@ -640,6 +690,19 @@
                         margin-bottom: 20px;
                     }
 
+                    .rentals-btns-ski p:hover {
+                        background-color: #4C86A8;
+                        color: white;
+                        cursor: pointer;
+                        transition: .5s;
+                        box-shadow: 0 0 15px #f1a500;
+                    }
+
+                    .rentals-btns-ski p{
+                        background-color: #f1a500;
+                    }
+
+                
                     .rentals-btns-b p {
                         border: 2px double #4C86A8;
                         height: 75px;
@@ -772,6 +835,11 @@
 
                     .rentals-prices{ 
                         z-index: 2;
+                        width: 135%;
+                    }
+
+                    .rentals-prices-ski{ 
+                        z-index: 2;
                     }
 
                     .white {
@@ -865,6 +933,10 @@
                     #outerwear-prices {
                         display: none;
                     }
+
+                    #wakeboard-prices {
+                        display: none;
+                    }
                     
                     @media only screen and (max-width: 1024px) {
                     /*For smaller laptops: */
@@ -924,12 +996,12 @@
                                     </h1>
                                 </div>
                             </div>
-                            <div class='rentals-body-middle'>
+                            <div class='rentals-body-middle-ski'>
                                 <p>
                                     Enjoy the slopes with Hillcrest Ski & Sports’ ski rentals! We offer a variety of ski equipment rentals including men’s skis and boots, women’s skis and boots, and kid’s skis and boots. Every ski package also comes with bindings and poles. New to skiing? We have experienced technician to properly fit you for your equipment-- depending on your skill level, and they’ll also provide a demonstration for you. All rentals are on a first-come, first-serve basis. Once you rent your ski equipment, you’ll have it for 24 hours, however, longer rentals are available.
                                 </p>
                             </div>
-                            <div class='rentals-btns'>
+                            <div class='rentals-btns-ski'>
                                 <div class='rentals-btns-a rBtn'>
                                     <p onclick='adultSkiClick()'>Adult</p>
                                 </div>
@@ -946,7 +1018,7 @@
                                     <p onclick='helmetsClick()'>Helmets</p>
                                 </div>
                             </div>
-                            <div class='rentals-prices'>
+                            <div class='rentals-prices-ski'>
                                 <div class='rentals-price-catagory' id='adult-ski-prices'>
                                     <h2>Adult</br>Ski</br>Prices</h2>
                                     <ul>
@@ -1120,7 +1192,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class='rentals-body-bottom'>
+                            <div class='rentals-body-bottom-ski'>
                                 <h2>
                                     Ski Package Rental
                                 </h2>
@@ -1147,10 +1219,9 @@
                                     Your ski poles help you balance and time your turns. Whether you’ve forgotten, misplaced, or broke your own ski poles, we at Hillcrest provide adult and children’s ski poles for rent.
                                 </p>
                                 <p>*Youth pricing is for skis 140cm or shorter, and for size 6 boot or under.</p>
-                            </div>
-                         
-                          
+                            </div>                     
                         </div>
+                        
                         <div class='side-b-body' id='snowboard-body'>
                             <div class='rental-catagory-main'>
                                 <div class='rentals-body-top'>
@@ -1312,6 +1383,42 @@
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='snowshoe-prices'>
                                     <h1>Snowshoe Prices</h1>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                        <li>4 Week</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Package</li>
+                                        <li>$29</li>
+                                        <li>$34</li>
+                                        <li>$40</li>
+                                        <li>$48</li>
+                                        <li>$58</li>
+                                        <li>$78</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Boots</li>
+                                        <li>$15</li>
+                                        <li>$27</li>
+                                        <li>$35</li>
+                                        <li>$35</li>
+                                        <li>$45</li>
+                                        <li>$55</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Shoes Only</li>
+                                        <li>$21</li>
+                                        <li>$28</li>
+                                        <li>$35</li>
+                                        <li>$35</li>
+                                        <li>$49</li>
+                                        <li>$65</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1339,7 +1446,16 @@
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='kayak-prices'>
                                     <h1>Kayak Prices</h1>
-
+                                    <ul>
+                                        <li>1 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                    </ul>
+                                    <ul>
+                                        <li>$40</li>
+                                        <li>$90</li>
+                                        <li>$130</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class='rentals-body-bottom'>
@@ -1381,10 +1497,16 @@
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='paddleboard-prices'>
                                     <h1>Paddleboard Prices</h1>
-
-                                </div>
-                                <div class='rentals-price-catagory' id='wakesurf-prices'>
-                                    <h1>Wakesurf Prices</h1>
+                                    <ul>
+                                        <li>1 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                    </ul>
+                                    <ul>
+                                        <li>$40</li>
+                                        <li>$90</li>
+                                        <li>$130</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class='rentals-body-bottom'>
@@ -1441,12 +1563,36 @@
                                 </div>
                             </div>
                             <div class='rentals-prices'>
-                                <div class='rentals-price-catagory' id='paddleboard-prices'>
-                                    <h1>Paddleboard Prices</h1>
+                                <div class='rentals-price-catagory' id='wakeboard-prices'>
+                                    <h1>Wakeboard Prices</h1>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                        <li>2 Week</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Board + Vest</li>
+                                        <li>$35</li>
+                                        <li>$45</li>
+                                        <li>$59</li>
+                                        <li>$79</li>
+                                        <li>$109</li>
+                                    </ul>
 
                                 </div>
                                 <div class='rentals-price-catagory' id='wakesurf-prices'>
                                     <h1>Wakesurf Prices</h1>
+                                    <ul>
+                                        <li>1 Day</li>
+                                        <li>3 Day</li>
+                                    </ul>
+                                    <ul>
+                                        <li>$35</li>
+                                        <li>$59</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class='rentals-body-bottom'>
@@ -1499,6 +1645,48 @@
                             <div class='rentals-prices'>
                                 <div class='rentals-price-catagory' id='mountaineering-prices'>
                                     <h1>Mountaineering Prices</h1>
+                                    <ul>
+                                        <li class='red'>1 Day</li>
+                                        <li>1 Day</li>
+                                        <li>2 Day</li>
+                                        <li>3 Day</li>
+                                        <li>1 Week</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Package</li>
+                                        <li>$35</li>
+                                        <li>$35</li>
+                                        <li>$50</li>
+                                        <li>$80</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Boots</li>
+                                        <li>$18</li>
+                                        <li>$18</li>
+                                        <li>$25</li>
+                                        <li>$36</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Helmet</li>
+                                        <li>$8</li>
+                                        <li>$8</li>
+                                        <li>$13</li>
+                                        <li>$26</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Crampon</li>
+                                        <li>$10</li>
+                                        <li>$10</li>
+                                        <li>$15</li>
+                                        <li>$22</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Ice Axe</li>
+                                        <li>$8</li>
+                                        <li>$8</li>
+                                        <li>$13</li>
+                                        <li>$18</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class='rentals-body-bottom'>
