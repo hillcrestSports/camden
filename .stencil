@@ -8,14 +8,8 @@
     "page": {
       "rentals.html": "/rentals/",
       "conditions.html": "/conditions/",
-      "ski-rentals.html": "/ski-rentals/",
-      "snowboard-rentals.html": "/snowboard-rentals/",
-      "snowshoe-rentals.html": "/snowshoe-rentals/",
-      "paddleboard-rentals.html": "/paddleboard-rentals/",
-      "mountaineering-rentals.html": "/mountaineering-rentals/",
       "kayak-rentals.html": "/kayak-rentals/",
-      "tuning.html": "/tuning/",
-      "rentals-b.html": "/rentals-b/"
+      "tuning.html": "/tuning/"
     },
     "product": {}
   }
