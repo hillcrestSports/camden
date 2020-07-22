@@ -48,8 +48,12 @@
                         if (sideB.style.display != 'none') {
                             menu.style.width = '240px';
                             menu.style.textAlign = 'center';
+                        // } else if (sideB.style.width < '500px')
+                        //     menu.style.width = '100vw';
+                            }
                         }
-                    }
+                        
+
 
                     function skiMenuClick() {
                         const skiBody = document.getElementById('ski-body');
@@ -243,14 +247,11 @@
                         const crosscountry = document.getElementById('crosscountry-youth-prices');
                         const poles = document.getElementById('poles-prices');
                         const helmet = document.getElementById('helmet-prices');
-                        // const bottom = document.getElementByClassName('rental-body-bottom');
                         if (youth.style.display = 'none') {
                             youth.style.display = 'flex'
                             adult.style.display = 'none'
                             crosscountry.style.display = 'none';
-                            poles.style.display = 'none';
                             helmet.style.display = 'none';
-                            // bottom.style.display = 'none';
                         } 
                     }
 
@@ -258,13 +259,11 @@
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
                         const crosscountryY = document.getElementById('crosscountry-youth-prices');
-                        const poles = document.getElementById('poles-prices');
                         const helmet = document.getElementById('helmet-prices');
                         if (crosscountryY.style.display = 'none') {
                             crosscountryY.style.display = 'flex'
                             adult.style.display = 'none'
                             youth.style.display = 'none';
-                            poles.style.display = 'none';
                             helmet.style.display = 'none';
                         } 
                     }
@@ -274,13 +273,11 @@
                         const adult = document.getElementById('adult-ski-prices');
                         const youth = document.getElementById('youth-ski-prices');
                         const crosscountryY = document.getElementById('crosscountry-youth-prices');
-                        const poles = document.getElementById('poles-prices');
                         if (helmet.style.display = 'none') {
                             helmet.style.display = 'flex'
                             adult.style.display = 'none'
                             crosscountryY.style.display = 'none';
                             youth.style.display = 'none';
-                            poles.style.display = 'none';
                         } 
                     }
 
@@ -306,7 +303,7 @@
 
                 <style>
                     #rental-card-front {
-                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/pricing-rentals.png'}}");
+                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/pricing.png'}}");
                         height: 310px;
                         background-size: cover;
                         background-position: center bottom;
@@ -371,7 +368,7 @@
                         width: 960px;
                         padding: 10px;
                         padding: 0px;
-                        height: 345px;
+                        height: 350px;
                         border-radius: 10px;
                         border-bottom-left-radius: 0;
                         border-bottom-right-radius: 0;
@@ -409,7 +406,8 @@
                     .rentals-title {
                         color: #4C86A8;
                         font-size: 70px;
-                        padding-top: 8px;
+                        padding-top: 0px;
+                        padding-bottom: 0px;
                         text-align: center;
                         width: 100%;
                     }
@@ -417,7 +415,8 @@
                     .rentals-title-2 {
                         color: #4C86A8;
                         font-size: 58px;
-                        padding-top: 8px;
+                        padding-top: 0px;
+                        padding-bottom: 0px;
                         text-align: center;
                         width: 120%;
                     }
@@ -438,7 +437,7 @@
                         margin-top: 10px;
                         padding: 12px;
                         font-size: calc(9px + 1.1vmin);   
-                        width: 75%;                    
+                        width: 80%;                    
                         background-color: white;
                         min-height: 200px;  
                     }
@@ -458,7 +457,7 @@
 
                     .rentals-body-bottom-ski {
                         position: relative;
-                        left: -185px;
+                        left: -160px;
                         top: 30px;
                         background-color: white;
                         padding: 12px;
@@ -536,7 +535,7 @@
                         height: 60px;
                         border-radius: 20px;
                         font-size: 33px;
-                        width: 310px;
+                        width: 270px;
                     }
                     
                     .rentals-btns-c p {
@@ -808,17 +807,21 @@
 
                         #rental-menu {
                             width: 85vw;
-                            margin: 0 auto;
                         }
 
                         #rental-card-back {
-                            min-height: 620px;
+                            min-height: 310px;
                             grid-template-columns: 1.2vmin;
                             max-width: 90vw;
                         }
 
                         .rentals-title {
-                            font-size: calc(12px + 3vmin);
+                            font-size: calc(22px + 3vmin);
+                            display: inline-block;
+                        }
+
+                        .rentals-title-2 {
+                            font-size: calc(22px + 3vmin);
                             display: inline-block;
                         }
 
@@ -827,6 +830,7 @@
                             width: 95vw;
                             position: relative;
                             left: -30px;
+                            font-size: calc(10px + 1.5vmin);
                         }
 
                         .rentals-btns {
@@ -1359,7 +1363,7 @@
                                     <ul>
                                         <li class='white'>$40</li>
                                         <li>$90</li>
-                                        <li class='white'>$130</li>
+                                        <li class='white'>$149</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1402,7 +1406,7 @@
                                     <ul>
                                         <li class='white'>$40</li>
                                         <li>$90</li>
-                                        <li class='white'>$130</li>
+                                        <li class='white'>$149</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1464,6 +1468,14 @@
                                         <li class='white'>$59</li>
                                         <li>$79</li>
                                         <li class='white'>$109</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Wakeboard Demo</li>
+                                        <li class='red'>$35</li>
+                                        <li>$69</li>
+                                        <li class='white'>$89</li>
+                                        <li>$139</li>
+                                        <li class='white'>$189</li>
                                     </ul>
                                     <ul>
                                         <li>Wakesurf + Vest</li>
@@ -1581,7 +1593,7 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- <div class='side-b-body' id='outerwear-body'>
+                        <div class='side-b-body' id='outerwear-body'>
                             <div class='rental-catagory-main'>
                                 <div class='rentals-body-top'>
                                     <h1 class='rentals-title'>
@@ -1590,21 +1602,33 @@
                                 </div>
                             </div>
                             <div class='rentals-body-middle'>
-                                <div class='rentals-btns-d'>
-                                    <p class='rental-button-right' onclick='outerwearClick()'>
-                                        Outerwear
-                                    </p>
-                                </div>
+                                Hillcrest sports offers everything that you could need to enjoy the regions mountains to the fullest, including outerwear rentals. Our house brand for rentals is 686 and boasts 10,000mm waterproof/breathability rating. Although we do not rent gloves or goggles, we do have those available for purchase.
                             </div>
-                            <div class='rentals-body-bottom'>
-                            </div> 
                             <div class='rentals-prices'>
-                                <div class='rentals-price-catagory' id='outerwear-prices'>
-                                    <h2>Outerwear</br>Prices</h2>
-
+                                    <div class='rentals-price-catagory'>
+                                        <h2>Oterwear Prices</h2>
+                                        <ul>
+                                            <li class='red'>1 Day</li>
+                                            <li class='white'>1 Day</li>
+                                            <li>2 Day</li>
+                                            <li class='white'>3 Day</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Package</li>
+                                            <li class='white'>$29</li>
+                                            <li>$90</li>
+                                            <li class='white'>$149</li>
+                                        </ul>
+                                        <ul>
+                                            <li>Pants</li>
+                                            <li class='white'>$16</li>
+                                            <li>$25</li>
+                                            <li class='white'>$33</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1691,7 +1715,7 @@
                   </div>
                   
                   <div class='policy'>
-                    <p class='policy-p'><span class='policy-title'>Better than the Mountain?</span><span class='para'>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay half the price.</span></p>
+                    <p class='policy-p'><span class='policy-title'>Better than the Mountain?</span><span class='para'>Our rental packages are less expensive than all the local resorts. Skip the long resort rental lines and pay a lower price.</span></p>
                   </div>
                 </div>
             </div>
