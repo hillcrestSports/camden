@@ -5,16 +5,6 @@
         {{#unless theme_settings.hide_page_heading }}
         {{/unless}}
 
-        <!-- {{#if page.sub_pages}}
-        <nav class="navBar navBar--sub">
-            <ul class="navBar-section account-navigation">
-                {{#each page.sub_pages}}
-                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-                {{/each}}
-            </ul>
-        </nav>
-        {{/if}} -->
-
         <style>
             #main-rental-card {
                 margin-top: 20px;
@@ -303,7 +293,7 @@
 
                 <style>
                     #rental-card-front {
-                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/pricing.png'}}");
+                        background-image: url("{{cdn 'assets/img/hillcrest/rentals/pricing-click.png'}}");
                         height: 310px;
                         background-size: cover;
                         background-position: center bottom;
@@ -329,8 +319,8 @@
                     @media only screen and (max-width: 1024px) {
                     /*For smaller laptops: */
                          #rental-card-front {
-                             height: 30vmin;
-                             width: 90vmin;
+                             height: 33vmin;
+                             width: 93vmin;
                          } 
                     }
 
@@ -420,10 +410,6 @@
                         text-align: center;
                         width: 120%;
                     }
-
-                    /* .rentals-title h1{
-                        width: 70vw;
-                    } */
 
                     .rentals-body-middle {
                         margin-top: 10px;
@@ -537,25 +523,6 @@
                         font-size: 33px;
                         width: 270px;
                     }
-                    
-                    .rentals-btns-c p {
-                        border: 2px double #4C86A8;
-                        width: 150px;
-                        height: 60px;
-                        border-radius: 20px;
-                        font-size: 33px;
-                        margin: 0 1.2vmin;
-                        padding: 5px;
-                    }
-
-                    .rentals-btns-d p {
-                        border: 2px double #4C86A8;
-                        height: 60px;
-                        border-radius: 20px;
-                        font-size: 33px;
-                        width: 170px;
-                        margin: 0 1.2vmin;
-                    }
 
                     .rentals-btns-e p {
                         border: 2px double #4C86A8;
@@ -565,73 +532,6 @@
                         width: 220px;
                         margin: 0 1.2vmin;
                         margin-bottom: 20px;
-                    }
-
-                    .rentals-btns-z p {
-                        border: 2px double #4C86A8;
-                        height: 50px;
-                        border-radius: 20px;
-                        font-size: 29px;
-                        width: 240px;
-                        margin: 0 auto;
-                    }
-  
-                    .rentals-btns-g p {
-                        border: 2px double #4C86A8;
-                        width: 180px;
-                        height: 110px;
-                        border-radius: 20px;
-                        font-size: 33px;
-                        margin-right: 20%;
-                        padding: 5px;
-                    }
-                    
-                    .rentals-btns-xx p {
-                        border: 2px double #4C86A8;
-                        width: 160px;
-                        height: 85px;
-                        border-radius: 20px;
-                        font-size: 27px;
-                        margin-right: 20%;
-                        padding: 5px;
-                        padding-bottom: 0;
-                        margin-bottom: 0;
-                    }
-                
-                    .rentals-btns-demo p {
-                        border: 2px double #4C86A8;
-                        width: 120px;
-                        height: 100px;
-                        border-radius: 20px;
-                        font-size: 33px;
-                        margin-top: 10px;
-                        margin-right: 20%;
-                        padding: 5px;
-                    }
-
-                    .rentals-btns-helmets p {
-                        border: 2px double #4C86A8;
-                        width: 160px;
-                        height: 64px;
-                        border-radius: 20px;
-                        font-size: 33px;
-                        margin: 0 1.2vmin;
-                        padding: 5px;
-                        margin-bottom: 0px;
-                        
-                    }
-
-                    .rental-button-right {
-                        background-color:#f1a500;
-                        position: relative;
-                        left: 12vw;
-                    }
-
-                    .rental-button-right:hover {
-                        background-color: #4C86A8;
-                        cursor: pointer;
-                        transition: .6s;
-                        box-shadow: 0 0 15px #ffee10;
                     }
 
                     .red {
@@ -800,16 +700,11 @@
                         display: block;
                         width: auto;
                         height: auto;
-                    }
-                          
+                        }  
                     }
 
                     @media only screen and (max-width: 500px) {
                     /* For mobile phones: */
-
-                    /* ADD query to remove icons at smaller VW */
-
-
                         #rental-menu {
                             width: 85vw;
                         }
@@ -1466,8 +1361,7 @@
                                         <li>1 Week</li>
                                         <li class='white'>2 Week</li>
                                     </ul>
-                                    <ul>
-                                        <li>Wakeboard + Vest</li>
+                                    <ul> Wakeboard
                                         <li class='white'>$35</li>
                                         <li>$45</li>
                                         <li class='white'>$59</li>
@@ -1475,7 +1369,7 @@
                                         <li class='white'>$109</li>
                                     </ul>
                                     <ul>
-                                        <li>Wakeboard Demo</li>
+                                        <li>Demo Board</li>
                                         <li class='red'>$35</li>
                                         <li>$69</li>
                                         <li class='white'>$89</li>
@@ -1483,7 +1377,7 @@
                                         <li class='white'>$189</li>
                                     </ul>
                                     <ul>
-                                        <li>Wakesurf + Vest</li>
+                                        <li>Wakesurf</li>
                                         <li class='white'>$35</li>
                                         <li class='red'>$45</li>
                                         <li class='white'>$59</li>
@@ -1495,22 +1389,10 @@
                             </div>
                             <div class='rentals-body-bottom'>
                                 <h2>
-                                    Wakesurf and Wakeboard Rentals
-                                </h2>
-                                <p>
-                                    If you’re interested in a Wakeboard or a Wakesurf Board
-                                </p>
-                                <h2>
                                     Where to Wakesurf
                                 </h2>
                                 <p>
-                                    Here in the Portland OR and Vancouver WA area, there are several popular places to go paddle boarding. Take in the breathtaking views of Mt. Hood at Trillium Lake located in the Mt. Hood National Forest or stay closer to home and head out to Vancouver Lake -- which is a great spot for beginners. Most places require a day use fee, but to make it convenient, we sell recreational passes in-store. So when you stop by to pick up your rental, you can pick up your pass at the same time!
-                                </p>
-                                <h2>
-                                    Transporting Your Wakeboard
-                                </h2>
-                                <p>
-                                    One thing to keep in mind with your paddle board rental is how you’ll be transporting it. You can invest in a rack to fit in the back of your truck or car or invest in a small trailer that’s capable of transporting several paddle boards at one time. You can also tie it down by using straps and the crossbars installed on the roof of your vehicle.
+                                    Here in the Portland OR and Vancouver WA area, there are several popular places to go wakeboarding. Take in the breathtaking views of Mt. Hood at Trillium Lake located in the Mt. Hood National Forest or stay closer to home and head out to Vancouver Lake -- which is a great spot for beginners. Most places require a day use fee, but to make it convenient, we sell recreational passes in-store. So when you stop by to pick up your rental, you can pick up your pass at the same time!
                                 </p>
                                 <h2>
                                     Reserve Your Wakeboard
