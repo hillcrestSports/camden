@@ -4,7 +4,9 @@
   "port": "3000",
   "customLayouts": {
     "brand": {},
-    "category": {},
+    "category": {
+      "rentals-category.html": "/rentals-cat/"
+    },
     "page": {
       "rentals.html": "/rentals/",
       "conditions.html": "/conditions/",
