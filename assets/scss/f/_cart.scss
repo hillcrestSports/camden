@@ -220,13 +220,20 @@
     }
 
     .cart-remove {
-        background-color: $buttonStyle-primary-backgroundColor;
-        color: $buttonStyle-primary-color;
+        text-decoration: none;
+        color: black;
+        font-size: 14px; 
+        // background-color: $buttonStyle-primary-backgroundColor;
+        // color: $buttonStyle-primary-color;
 
         svg {
             fill: $buttonStyle-primary-color;
             stroke: $buttonStyle-primary-color;
         }
+    }
+    .cart-remove:hover {
+        color: red;
+        transition: 0.3s;
     }
 
     .definitionList-key {

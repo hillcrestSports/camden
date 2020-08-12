@@ -43,8 +43,9 @@
                                 </dd>
                             {{/each}}
                         </dl>
-
-                        <a href="#" data-item-edit="{{id}}">{{lang 'cart.checkout.change'}}</a>
+<!-- CHANGE BTN -->
+                        <a href="#" data-item-edit="{{id}}" >{{lang 'cart.checkout.change'}} </a>
+<!-- CHANGE BTN -->
                     {{/if}}
 
                     {{#if type '==' 'GiftCertificate'}}
@@ -136,6 +137,7 @@
                     {{/or}}
                     {{# if can_modify}}
                         <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
+                            X
                             <svg><use xlink:href="#icon-close"></use></svg>
                         </a>
                     {{else}}

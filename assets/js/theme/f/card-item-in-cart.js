@@ -1,3 +1,4 @@
+// REMOVE ITEM ID
 export default function (removeItemId) {
     // Display on product card that product has been added to cart
     const cartItems = $('#cart-preview-dropdown .side-cart-item');
