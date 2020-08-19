@@ -136,10 +136,14 @@
                         {{> components/common/login-for-pricing}}
                     {{/or}}
                     {{# if can_modify}}
-                        <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
+                        <input type="button" 
+                            class="cart-remove icon" 
+                            data-cart-itemid="{{id}}" 
+                            onClick()
+                            data-confirm-delete="{{lang 'cart.confirm_delete'}}">
                             X
                             <svg><use xlink:href="#icon-close"></use></svg>
-                        </a>
+                       </input>
                     {{else}}
                         {{#if type '==' 'GiftCertificate'}}
                             <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
