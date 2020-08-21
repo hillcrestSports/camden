@@ -43,9 +43,8 @@
                                 </dd>
                             {{/each}}
                         </dl>
-<!-- CHANGE BTN -->
-                        <a href="#" data-item-edit="{{id}}" >{{lang 'cart.checkout.change'}} </a>
-<!-- CHANGE BTN -->
+
+                        <a href="#" data-item-edit="{{id}}">{{lang 'cart.checkout.change'}}</a>
                     {{/if}}
 
                     {{#if type '==' 'GiftCertificate'}}
@@ -136,14 +135,9 @@
                         {{> components/common/login-for-pricing}}
                     {{/or}}
                     {{# if can_modify}}
-                        <input type="button" 
-                            class="cart-remove icon" 
-                            data-cart-itemid="{{id}}" 
-                            onClick()
-                            data-confirm-delete="{{lang 'cart.confirm_delete'}}">
-                            X
+                        <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">
                             <svg><use xlink:href="#icon-close"></use></svg>
-                       </input>
+                        </a>
                     {{else}}
                         {{#if type '==' 'GiftCertificate'}}
                             <a class="cart-remove icon" data-cart-itemid="{{id}}" href="#" data-confirm-delete="{{lang 'cart.confirm_delete'}}">

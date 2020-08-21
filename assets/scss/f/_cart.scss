@@ -220,20 +220,13 @@
     }
 
     .cart-remove {
-        text-decoration: none;
-        color: black;
-        font-size: 14px; 
-        // background-color: $buttonStyle-primary-backgroundColor;
-        // color: $buttonStyle-primary-color;
+        background-color: $buttonStyle-primary-backgroundColor;
+        color: $buttonStyle-primary-color;
 
-        // svg {
-        //     fill: $buttonStyle-primary-color;
-        //     stroke: $buttonStyle-primary-color;
-        // }
-    }
-    .cart-remove:hover {
-        color: red;
-        transition: 0.3s;
+        svg {
+            fill: $buttonStyle-primary-color;
+            stroke: $buttonStyle-primary-color;
+        }
     }
 
     .definitionList-key {

@@ -260,7 +260,7 @@ export default class Cart extends PageManager {
         const options = {
             template: 'cart/modals/configure-product',
         };
-        
+
         modal.open();
 
         utils.api.productAttributes.configureInCart(itemId, options, (err, response) => {
@@ -344,8 +344,6 @@ export default class Cart extends PageManager {
         const cartUpdateQtyTextChange = _.bind(_.debounce(this.cartUpdateQtyTextChange, debounceTimeout), this);
         const cartRemoveItem = _.bind(_.debounce(this.cartRemoveItem, debounceTimeout), this);
         let preVal;
-        // DYLAN
-        console.log('cart events have been bound')
 
         // cart update
         $('[data-cart-update]', this.$cartContent).on('click', event => {
@@ -372,18 +370,15 @@ export default class Cart extends PageManager {
         $('.cart-remove', this.$cartContent).on('click', event => {
             event.stopImmediatePropagation();
             const itemId = $(event.currentTarget).data('cartItemid');
-            // const string = $(event.currentTarget).data('confirmDelete');
-            // swal({
-            //     text: string,
-            //     type: 'warning',
-            //     showCancelButton: true,
-            // }).then(() => {
-            //     cartRemoveItem(itemId);
-            // });
-             // remove item from cart
-            // DYLAN 8-10-20
-            cartRemoveItem(itemId);
-            console.log('cartRemoveItem function called')
+            const string = $(event.currentTarget).data('confirmDelete');
+            swal({
+                text: string,
+                type: 'warning',
+                showCancelButton: true,
+            }).then(() => {
+                // remove item from cart
+                cartRemoveItem(itemId);
+            });
             event.preventDefault();
         });
 
